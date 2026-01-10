@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-
+const OrderController = require('./controllers/orderController');
 const ProductController = require('./controllers/productController');
 const checkAuth = require('./utils/checkAuth');
 const UserController = require('./controllers/userController');
@@ -22,6 +22,9 @@ app.get('/auth/me', checkAuth, UserController.getMe);
 app.get('/products', ProductController.getAll);
 app.get('/products/:id', ProductController.getOne);
 app.post('/products', checkAuth, ProductController.create);
+
+app.post('/orders', checkAuth, OrderController.createOrder);
+app.get('/orders', checkAuth, OrderController.getAll);
 
 
 app.get('/', (req, res) => {
