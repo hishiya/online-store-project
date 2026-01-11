@@ -1,0 +1,80 @@
+.item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fff;
+}
+
+.image {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.info {
+    flex: 1; 
+}
+
+.title {
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+
+.count {
+    width: 100px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.price {
+    width: 100px;
+    text-align: center;
+    font-size: 18px;
+    color: #fe5f1e;
+}
+
+.removeBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.removeBtn:hover {
+    opacity: 1;
+}
+
+
+.countBlock {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 20px;
+}
+
+.countBtn {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fe5f1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.countBtn:hover {
+    background-color: #fe5f1e;
+    color: #fff;
+    border-color: #fe5f1e;
+}
+

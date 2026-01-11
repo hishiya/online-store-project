@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const ProductSchema = new mongoose.Schema({
     title: {
         type: String,
@@ -12,19 +13,11 @@ const ProductSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    discountPercentage: {
+    weight: {
         type: Number,
-        default: 0,
+        required: true,
     },
-    rating: {
-        type: Number,
-        default: 0,
-    },
-    stock: {
-        type: Number,
-        default: 0,
-    },
-    brand: {
+    imageUrl: {
         type: String,
         required: true,
     },
@@ -32,16 +25,16 @@ const ProductSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    thumbnail: {
-        type: String,
-        required: true,
+    rating: {
+        type: Number,
+        default: 0,
     },
-    likes: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-    }]
+    viewsCount: {
+        type: Number,
+        default: 0,
+    },
 }, {
     timestamps: true,
-})
+});
 
 module.exports = mongoose.model('Product', ProductSchema);
