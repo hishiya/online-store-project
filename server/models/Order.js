@@ -13,8 +13,8 @@ const OrderSchema = new mongoose.Schema({
                 type: mongoose.Schema.Types.ObjectId,
                 ref: 'Product',
                 required: true,
-            }, 
-            quantity: {
+            },
+            count: {
                 type: Number,
                 default: 1,
             },
@@ -34,6 +34,23 @@ const OrderSchema = new mongoose.Schema({
         type: String,
         default: 'pending',
     },
+
+    fullName: { 
+        type: String, 
+        required: true 
+    },
+    phone: { 
+        type: String, 
+        required: true 
+    },
+    address: { 
+        type: String, 
+        required: true 
+    },
+    comment: { 
+        type: String 
+    },
+
 }, {
     timestamps: true,
 });

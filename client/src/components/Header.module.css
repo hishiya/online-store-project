@@ -36,7 +36,7 @@
 }
 
 .link:hover {
-    color: #007bff;
+    color: #fe5f1e;
 }
 
 .userBlock {
@@ -52,18 +52,21 @@
 
 .logoutBtn {
     background: none;
-    border: 1px solid #ff4d4d;
-    color: #ff4d4d;
-    padding: 6px 12px;
-    border-radius: 4px;
+    border: 2px solid #fe5f1e;
+    color: #fe5f1e;
+    padding: 8px 16px;
+    border-radius: 30px;
     cursor: pointer;
     font-size: 14px;
-    transition: all 0.2s;
+    font-weight: 500;
+    transition: all 0.2s ease;
 }
 
 .logoutBtn:hover {
-    background-color: #ff4d4d;
+    background-color: #fe5f1e;
     color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(254, 95, 30, 0.25);
 }
 
 .cartContainer {
@@ -77,7 +80,7 @@
 }
 
 .cartContainer:hover {
-    color: #007bff;
+    color: #fe5f1e;
 }
 
 .cartPrice {
@@ -96,7 +99,7 @@
     position: absolute;
     top: -8px;
     right: -10px;
-    background-color: #ff4d4d; 
+    background-color: #fe5f1e; 
     color: white;
     font-size: 11px;
     font-weight: bold;

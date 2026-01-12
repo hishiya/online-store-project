@@ -54,3 +54,43 @@ exports.create = async (req, res) => {
         });
     }
 };
+
+exports.remove = async (req, res) => {
+    try {
+        const productId = req.params.id;
+
+        const doc = await ProductModel.findOneAndDelete({ _id: productId });
+
+        if (!doc) {
+            return res.status(404).json({ message: 'Товар не знайдено' });
+        }
+
+        res.json({ success: true });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ message: 'Не вдалося видалити товар' });
+    }
+};
+
+exports.update = async (req, res) => {
+    try {
+        const productId = req.params.id;
+
+        await ProductModel.updateOne(
+            { _id: productId },
+            {
+                title: req.body.title,
+                description: req.body.description,
+                price: req.body.price,
+                imageUrl: req.body.imageUrl,
+                category: req.body.category,
+                weight: req.body.weight,
+            }
+        );
+
+        res.json({ success: true });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ message: 'Не вдалося оновити товар' });
+    }
+};

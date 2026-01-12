@@ -1,4 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { loginUser, registerUser, checkAuth } from '../../auth/model/authSlice';
+
+const calcTotalPrice = (items) => {
+    return items.reduce((sum, obj) => obj.price * obj.count + sum, 0)
+}
+
+const mapCartFromServer = (serverCart) => {
+    return serverCart.map((item) => ({
+        ...item.product,
+        count: item.count
+    }))
+}
 
 const initialState = {
     items: [],
@@ -21,17 +33,13 @@ const cartSlice = createSlice({
                 })
             }
 
-            state.totalPrice = state.items.reduce((sum, obj) => {
-                return (obj.price * obj.count) + sum;
-            }, 0)
+            state.totalPrice = calcTotalPrice(state.items);
         },
 
         removeItem(state, action) {
             state.items = state.items.filter(obj => obj._id !== action.payload);
 
-            state.totalPrice = state.items.reduce((sum, obj) => {
-                return (obj.price * obj.count) + sum;
-            }, 0)
+            state.totalPrice = calcTotalPrice(state.items);
         },
 
         minusItem(state, action) {
@@ -44,9 +52,7 @@ const cartSlice = createSlice({
                 }
             }
 
-            state.totalPrice = state.items.reduce((sum, obj) => {
-                return (obj.price * obj.count) + sum;
-            }, 0);
+            state.totalPrice = calcTotalPrice(state.items);
         },
 
         clearCart(state) {
@@ -54,6 +60,30 @@ const cartSlice = createSlice({
             state.totalPrice = 0;
         }
         
+    },
+
+    extraReducers: (builder) => {
+        
+        builder.addCase(checkAuth.fulfilled, (state, action) => {
+            if (action.payload?.cart) {
+                state.items = mapCartFromServer(action.payload.cart);
+                state.totalPrice = calcTotalPrice(state.items);
+            }
+        });
+
+        builder.addCase(loginUser.fulfilled, (state, action) => {
+            if (action.payload?.cart) {
+                state.items = mapCartFromServer(action.payload.cart);
+                state.totalPrice = calcTotalPrice(state.items);
+            }
+        });
+
+        builder.addCase(registerUser.fulfilled, (state, action) => {
+            if (action.payload?.cart) {
+                state.items = mapCartFromServer(action.payload.cart);
+                state.totalPrice = calcTotalPrice(state.items);
+            }
+        });
     }
 })
 

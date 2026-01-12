@@ -1,0 +1,166 @@
+    .root {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif; 
+  
+    h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #333;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+    }
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; 
+    gap: 40px;
+  
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+  
+  .form {
+    background: #fff;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      color: #555;
+    }
+  
+    input, textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 2px solid #e8e8e8;
+      border-radius: 12px;
+      font-size: 16px;
+      transition: all 0.2s ease;
+      outline: none;
+      box-sizing: border-box;
+      background-color: #fafafa;
+  
+      &:focus {
+        border-color: #fe5f1e; 
+        background-color: #fff;
+        box-shadow: 0 0 0 3px rgba(254, 95, 30, 0.1);
+      }
+    }
+  
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+  }
+  
+  .submitBtn {
+    width: 100%;
+    padding: 16px 24px;
+    background-color: #fe5f1e;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(254, 95, 30, 0.3);
+  
+    &:hover {
+      background-color: #e34c0f;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(254, 95, 30, 0.4);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+  }
+  
+  .summary {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 12px;
+    height: fit-content;
+    border: 1px solid #eee;
+  
+    h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+  }
+  
+  .itemList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+  
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  
+  .itemInfo {
+    b {
+      display: block;
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 4px;
+    }
+    span {
+      font-size: 13px;
+      color: #777;
+    }
+  }
+  
+  .itemPrice {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .total {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    span:first-child {
+      font-size: 18px;
+      color: #555;
+    }
+    
+    span:last-child {
+      font-size: 24px;
+      font-weight: 800;
+      color: #2c3e50;
+    }
+  }

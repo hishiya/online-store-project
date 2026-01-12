@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { clearCart } from '../features/cart/model/cartSlice';
 import { CartItem } from '../features/cart/components/CartItem';
 
@@ -7,6 +7,7 @@ import styles from './CartPage.module.css';
 
 export const CartPage = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const { items, totalPrice } = useSelector((state) => state.cart)
 
     const totalCount = items.reduce((sum, item) => sum + item.count, 0)
@@ -53,7 +54,10 @@ export const CartPage = () => {
                     Загальна сума замовлення: <b>{totalPrice} ₴</b>
                 </p>
                 
-                <button className={styles.payBtn}>
+                <button 
+                    onClick={() => navigate('/checkout')}
+                    className={styles.payBtn}
+                >
                     Оплатити зараз
                 </button>
             </div>

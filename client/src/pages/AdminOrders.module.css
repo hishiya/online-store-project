@@ -1,0 +1,72 @@
+.root {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+  
+    h1 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+  }
+  
+  .tableWrapper {
+    overflow-x: auto;           
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px; 
+  
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+  
+    th {
+      background: #f9f9f9;
+      font-weight: 600;
+      color: #555;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+  
+  .statusSelect {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+  
+    option {
+      font-weight: normal;
+    }
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+
+  .itemsList {
+    font-size: 13px;
+    color: #666;
+    max-width: 300px;
+    
+    div {
+      margin-bottom: 4px;
+    }
+  }

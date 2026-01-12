@@ -7,6 +7,7 @@ import clsx from "clsx";
 export const AuthForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [fullName, setFullName] = useState("");
     const [isLogin, setIsLogin] = useState(true);
 
     const dispatch = useDispatch();
@@ -18,17 +19,30 @@ export const AuthForm = () => {
         if (isLogin) {
             dispatch(loginUser({email, password}))
         } else {
-            dispatch(registerUser({email, password, fullName: 'New User'}))
+            dispatch(registerUser({email, password, fullName: fullName || 'Користувач'}))
         }
     }
 
     return (
         <form className={styles.container} onSubmit={handleSubmit}>
             <h2 className={styles.title}>
-                {isLogin ? "Login" : "Register"}
+                {isLogin ? "Вхід" : "Реєстрація"}
             </h2>
 
             {status && <div className={styles.error}>{status}</div>}
+
+            {!isLogin && (
+                <div className={styles.formGroup}>
+                    <input
+                        className={styles.input}
+                        type="text"
+                        placeholder="ПІБ"
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
+                        required={!isLogin}
+                    />
+                </div>
+            )}
 
             <div className={styles.formGroup}>
                 <input
@@ -63,7 +77,10 @@ export const AuthForm = () => {
             <p className={styles.toggleText}>
                 <span 
                     className={styles.link}
-                    onClick={() => setIsLogin(!isLogin)}
+                    onClick={() => {
+                        setIsLogin(!isLogin);
+                        setFullName('');
+                    }}
                 >
                     {isLogin ? 'Немає акаунту? Реєстрація' : 'Вже є акаунт? Вхід'}
                 </span>

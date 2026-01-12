@@ -1,18 +1,52 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Header } from './components/Header';
 import { checkAuth } from './features/auth/model/authSlice';
 import { AppRouter } from './app/AppRouter'; 
+import { api } from './services/api/baseApi'; 
 
 function App() {
   const dispatch = useDispatch();
-  const { isLoading } = useSelector((state) => state.auth);
+  const { isLoading, isAuth } = useSelector((state) => state.auth);
+  const { items } = useSelector((state) => state.cart);
+  const isMounted = useRef(false);
 
   useEffect(() => {
     if (window.localStorage.getItem('token')) {
       dispatch(checkAuth());
     }
   }, [dispatch]);
+
+  useEffect(() => {
+    if (!isMounted.current) {
+      isMounted.current = true;
+      return;
+    }
+
+    if (!isAuth) return;
+
+    const saveCartToBackend = async () => {
+      try {
+        const cartData = items.map(item => ({
+           product: item._id,
+           count: item.count
+        }));
+
+  
+        await api.put('/api/cart', cartData); 
+        console.log("✅ Кошик синхронізовано з БД");
+      } catch (err) {
+        console.error("❌ Не вдалося зберегти кошик:", err);
+      }
+    };
+
+    const timeoutId = setTimeout(() => {
+        saveCartToBackend();
+    }, 500);
+
+    return () => clearTimeout(timeoutId);
+
+  }, [items, isAuth]);
 
   if (isLoading) {
     return (
@@ -25,8 +59,7 @@ function App() {
   return (
     <div className="app-layout">
       <Header />
-      
-      <main style={{ padding: '40px 20px', minHeight: 'calc(100vh - 80px)' }}>
+      <main style={{ padding: '40px 20px', minHeight: 'calc(100vh - 80px)', display: 'flex', justifyContent: 'center', alignItems: isAuth ? 'flex-start' : 'center' }}>
          <AppRouter />
       </main>
     </div>

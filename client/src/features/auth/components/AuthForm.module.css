@@ -1,18 +1,19 @@
 .container {
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 30px;
-    max-width: 400px;
+    border: none;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 420px;
     width: 100%;
     background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .title {
     text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 24px;
+    margin-bottom: 30px;
+    color: #2c2c2c;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 .formGroup {
@@ -21,38 +22,51 @@
 
 .input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    padding: 14px 18px;
+    border: 2px solid #e8e8e8;
+    border-radius: 12px;
     font-size: 16px;
     outline: none;
-    transition: border-color 0.2s;
-    box-sizing: border-box; 
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    background-color: #fafafa;
 }
 
 .input:focus {
-    border-color: #007bff;
+    border-color: #fe5f1e;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(254, 95, 30, 0.1);
 }
 
 .button {
     width: 100%;
-    padding: 12px;
-    background-color: #007bff;
+    padding: 14px 24px;
+    background-color: #fe5f1e;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 30px;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(254, 95, 30, 0.25);
 }
 
 .button:hover {
-    background-color: #0056b3;
+    background-color: #e34c0f;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(254, 95, 30, 0.35);
+}
+
+.button:active {
+    transform: translateY(0);
 }
 
 .button:disabled {
-    background-color: #a0a0a0;
+    background-color: #ccc;
     cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
 }
 
 .error {
@@ -73,11 +87,13 @@
 }
 
 .link {
-    color: #007bff;
+    color: #fe5f1e;
     cursor: pointer;
     font-weight: 500;
+    transition: color 0.2s;
 }
 
 .link:hover {
+    color: #e34c0f;
     text-decoration: underline;
 }

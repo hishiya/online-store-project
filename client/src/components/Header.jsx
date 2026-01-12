@@ -40,9 +40,9 @@ export const Header = () => {
                             </div>
                         </Link>
                         
-                        <span className={styles.userName}>
-                            {user?.email || 'User'}
-                        </span>
+                        <Link to="/profile" className={styles.userName} style={{ textDecoration: 'none' }}>
+                            {user?.fullName || user?.email || 'Мій кабінет'}
+                        </Link>
                         
                         <button onClick={handleLogout} className={styles.logoutBtn}>
                             Вийти
