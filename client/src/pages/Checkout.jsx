@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Navigate, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { api } from '../services/api/baseApi';
 import { clearCart } from '../features/cart/model/cartSlice';
 
@@ -35,11 +36,11 @@ export const Checkout = () => {
             setIsLoading(true);
             await api.post('/api/orders', formData);
             dispatch(clearCart());
-            alert('Order created successfully');
+            toast.success('Замовлення створено успішно. Наш менеджер скоро зателефонує вам', {position: "top-center", autoClose: 5000,})
             navigate('/');
         } catch (error) {
             console.error('Error creating order:', error);
-            alert('Failed to create order');
+            toast.error('Не вдалося створити замовлення, спробуйте пізніше')
         } finally {
             setIsLoading(false);
         }

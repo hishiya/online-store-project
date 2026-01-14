@@ -1,4 +1,5 @@
 import styles from './ProductCard.module.css';
+import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
 import { addItem } from '../../cart/model/cartSlice';
 import { api } from '../../../services/api/baseApi';
@@ -32,8 +33,7 @@ export const ProductCard = ({ product }) => {
         }
 
         dispatch(addItem(item));
-
-        alert('Товар додано в кошик! 🛒')
+        toast.success(`🛒 ${product.title} додано в кошик!`)
     }
 
     const onClickRemove = async () => {
@@ -41,9 +41,10 @@ export const ProductCard = ({ product }) => {
             try {
                 await api.delete(`/products/${product._id}`)
                 dispatch(fetchProducts())
+                toast.info('Товар видалено успішно')
             } catch (err) {
                 console.error(err);
-                alert('Не вдалося видалити товар');
+                toast.error('Не вдалося видалити товар')
             }
         }
     }

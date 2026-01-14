@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { loginUser, registerUser } from "../model/authSlice";
 import styles from "./AuthForm.module.css";
-import clsx from "clsx";
+import { toast, ToastContainer } from 'react-toastify';
 
 export const AuthForm = () => {
     const [email, setEmail] = useState("");
@@ -11,7 +12,21 @@ export const AuthForm = () => {
     const [isLogin, setIsLogin] = useState(true);
 
     const dispatch = useDispatch();
-    const { status, isLoading } = useSelector((state) => state.auth);
+    const navigate = useNavigate();
+    const { status, isLoading, isAuth } = useSelector((state) => state.auth);
+
+    useEffect(() => {
+        if (isAuth) {
+            toast.success('Ви успішно увійшли')
+            navigate('/');
+        }
+    }, [isAuth, navigate]);
+
+    useEffect(() => {
+        if (status && !isAuth) {
+            toast.error(status)
+        }
+    }, [status, isAuth])
 
     const handleSubmit = (e) => {
         e.preventDefault();

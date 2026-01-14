@@ -1,7 +1,8 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-// import { useSelector } from 'react-redux'; // Це тут вже не обов'язково
-
 import { ProductList } from '../features/products/components/ProductList';
+import { About } from '../pages/About';
+import { Promotions } from '../pages/Promotions';
+import { Contacts } from '../pages/Contacts';
 import { CartPage } from '../pages/CartPage';
 import { Checkout } from '../pages/Checkout';
 import { AuthForm } from '../features/auth/components/AuthForm';
@@ -13,6 +14,10 @@ export const AppRouter = () => {
     return (
         <Routes>
             <Route path="/" element={<ProductList />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/promotions" element={<Promotions />} />
+            <Route path="/contacts" element={<Contacts />} />
+
             <Route path="/cart" element={<CartPage />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/profile" element={<Profile />} />

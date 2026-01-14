@@ -1,9 +1,12 @@
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 import { checkAuth } from './features/auth/model/authSlice';
 import { AppRouter } from './app/AppRouter'; 
-import { api } from './services/api/baseApi'; 
+import { api } from './services/api/baseApi';
+import {ToastContainer} from "react-toastify";
+
 
 function App() {
   const dispatch = useDispatch();
@@ -57,12 +60,20 @@ function App() {
   }
 
   return (
-    <div className="app-layout">
-      <Header />
-      <main style={{ padding: '40px 20px', minHeight: 'calc(100vh - 80px)', display: 'flex', justifyContent: 'center', alignItems: isAuth ? 'flex-start' : 'center' }}>
-         <AppRouter />
-      </main>
-    </div>
+      <div className="app-layout" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Header />
+        <main style={{
+          padding: '40px 20px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: isAuth ? 'flex-start' : 'center',
+          flex: 1
+        }}>
+          <AppRouter />
+        </main>
+        <Footer />
+        <ToastContainer position='bottom-right' autoClose={3000} theme='colored'/>
+      </div>
   );
 }
 
