@@ -1,22 +1,27 @@
-import {  useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../model/productsSlice';
 import { ProductCard } from './ProductCard';
-import { useState } from 'react';
 import styles from './ProductList.module.css';
 
 export const ProductList = () => {
     const dispatch = useDispatch();
     const { items, error, isLoading } = useSelector((state) => state.products);
     const [searchQuery, setSearchQuery] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState(null);
 
-    const filteredProducts = items.filter((product) => {
-        const query = searchQuery.toLowerCase();
+    const displayedProducts = items.filter((product) => {
+        const query = searchQuery.trim().toLowerCase();
+        const matchesQuery =
+            !query ||
+            product.title?.toLowerCase().includes(query) ||
+            product.description?.toLowerCase().includes(query);
 
-        const matchesTitle = product.title?.toLowerCase().includes(query);
-        const matchesDescription = product.description?.toLowerCase().includes(query);
-        return matchesTitle || matchesDescription;
-    })
+        const matchesCategory = !selectedCategory || product.category === selectedCategory;
+
+        return matchesQuery && matchesCategory;
+    });
+
 
 
     useEffect(() => {
@@ -33,6 +38,7 @@ export const ProductList = () => {
 
 
 
+
     return (
         <div className={styles.container}>
             <div className={styles.sorting}>
@@ -45,18 +51,20 @@ export const ProductList = () => {
                         onChange={(e) => setSearchQuery(e.target.value)}
                     />
                     <ul className={styles.list}>
-                        <li className={styles.food}>Мангал</li>
-                        <li className={styles.food}>Салати</li>
-                        <li className={styles.food}>Напої</li>
-                        <li className={styles.food}>Супи</li>
+                        <li onClick={() => setSelectedCategory(null)} className={styles.food + ' ' + (selectedCategory === null ? styles.active : '')}>Усі</li>
+                        <li onClick={() => setSelectedCategory('Мангал')} className={styles.food + ' ' + (selectedCategory === 'Мангал' ? styles.active : '')}>Мангал</li>
+                        <li onClick={() => setSelectedCategory('Салати')}  className={styles.food + ' ' + (selectedCategory === 'Салати' ? styles.active : '')}>Салати</li>
+                        <li onClick={() => setSelectedCategory('Напої')} className={styles.food + ' ' + (selectedCategory === 'Напої' ? styles.active : '')}>Напої</li>
+                        <li onClick={() => setSelectedCategory('Супи')} className={styles.food + ' ' + (selectedCategory === 'Супи' ? styles.active : '')}>Супи</li>
                     </ul>
                 </div>
             </div>
+
             <div className={styles.grid}>
                 {!items.length ? (
                     <div className={styles.empty}>Товарів поки що немає</div>
-                ) : filteredProducts.length > 0 ? (
-                    filteredProducts.map((product) => (
+                ) : displayedProducts.length > 0 ? (
+                    displayedProducts.map((product) => (
                         <ProductCard key={product._id} product={product} />
                     ))
                 ) : (

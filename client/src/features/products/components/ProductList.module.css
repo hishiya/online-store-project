@@ -42,7 +42,9 @@
     list-style: none;
     font-size: 20px;
     position: relative;
+    cursor: pointer;
 }
+
 
 .food:before {
     content: '';
@@ -56,9 +58,11 @@
     top: 9px;
 }
 
-.food:active:before {
+.active:before {
     background-color: #fe5f1e;
 }
+
+
 
 
 .grid {
@@ -75,7 +79,7 @@
 
 @media (min-width: 1400px) {
     .grid {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(6, 1fr);
     }
 }
 .loading, .error, .empty {
