@@ -1,0 +1,1157 @@
+client/src:
+app      App.jsx     features   main.jsx  services
+App.css  components  index.css  pages
+client/src/app:
+AppRouter.jsx  store.js
+client/src/components:
+Footer.jsx  Footer.module.css  Header.jsx  Header.module.css
+client/src/features:
+auth  cart  products
+client/src/features/auth:
+api  components  model
+client/src/features/auth/api:
+authApi.js
+client/src/features/auth/components:
+AuthForm.jsx  AuthForm.module.css
+client/src/features/auth/model:
+authSlice.js
+client/src/features/cart:
+components  model
+client/src/features/cart/components:
+CartItem.jsx  CartItem.module.css
+client/src/features/cart/model:
+cartSlice.js
+client/src/features/products:
+api  components  model
+client/src/features/products/api:
+productsApi.js
+client/src/features/products/components:
+ProductCard.jsx         ProductList.jsx
+ProductCard.module.css  ProductList.module.css
+client/src/features/products/model:
+productsSlice.js
+client/src/pages:
+About.jsx                   CartPage.jsx         Profile.jsx
+About.module.css            CartPage.module.css  Profile.module.css
+AdminAddProduct.jsx         Checkout.jsx         Promotions.jsx
+AdminAddProduct.module.css  Checkout.module.css  Promotions.module.css
+AdminOrders.jsx             Contacts.jsx
+AdminOrders.module.css      Contacts.module.css
+client/src/services:
+api
+client/src/services/api:
+baseApi.js
+server:
+controllers  models        package.json       uploads
+index.js     node_modules  package-lock.json  utils
+server/controllers:
+orderController.js  productController.js  userController.js
+server/models:
+Order.js  Product.js  User.js
+server/node_modules:
+accepts                     math-intrinsics
+anymatch                    media-typer
+append-field                memory-pager
+balanced-match              merge-descriptors
+bcrypt                      mime-db
+binary-extensions           mime-types
+body-parser                 minimatch
+brace-expansion             minimist
+braces                      mkdirp
+bson                        mongodb
+buffer-equal-constant-time  mongodb-connection-string-url
+buffer-from                 @mongodb-js
+busboy                      mongoose
+bytes                       mpath
+call-bind-apply-helpers     mquery
+call-bound                  ms
+chokidar                    multer
+concat-map                  negotiator
+concat-stream               node-addon-api
+content-disposition         node-gyp-build
+content-type                nodemon
+cookie                      normalize-path
+cookie-signature            object-assign
+cors                        object-inspect
+debug                       once
+depd                        on-finished
+dotenv                      parseurl
+dunder-proto                path-to-regexp
+ecdsa-sig-formatter         picomatch
+ee-first                    proxy-addr
+encodeurl                   pstree.remy
+escape-html                 punycode
+es-define-property          qs
+es-errors                   range-parser
+es-object-atoms             raw-body
+etag                        readable-stream
+express                     readdirp
+fill-range                  router
+finalhandler                safe-buffer
+forwarded                   safer-buffer
+fresh                       semver
+function-bind               send
+get-intrinsic               serve-static
+get-proto                   setprototypeof
+glob-parent                 side-channel
+gopd                        side-channel-list
+has-flag                    side-channel-map
+hasown                      side-channel-weakmap
+has-symbols                 sift
+http-errors                 simple-update-notifier
+iconv-lite                  sparse-bitfield
+ignore-by-default           statuses
+inherits                    streamsearch
+ipaddr.js                   string_decoder
+is-binary-path              supports-color
+is-extglob                  toidentifier
+is-glob                     to-regex-range
+is-number                   touch
+is-promise                  tr46
+jsonwebtoken                typedarray
+jwa                         type-is
+jws                         @types
+kareem                      undefsafe
+lodash.includes             unpipe
+lodash.isboolean            util-deprecate
+lodash.isinteger            vary
+lodash.isnumber             webidl-conversions
+lodash.isplainobject        whatwg-url
+lodash.isstring             wrappy
+lodash.once                 xtend
+server/node_modules/accepts:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/anymatch:
+index.d.ts  index.js  LICENSE  package.json  README.md
+server/node_modules/append-field:
+index.js  lib  LICENSE  package.json  README.md  test
+server/node_modules/append-field/lib:
+parse-path.js  set-value.js
+server/node_modules/append-field/test:
+forms.js
+server/node_modules/balanced-match:
+index.js  LICENSE.md  package.json  README.md
+server/node_modules/bcrypt:
+bcrypt.js     Dockerfile         LICENSE       promises.js  test
+binding.gyp   Dockerfile-alpine  Makefile      README.md
+build-all.sh  examples           package.json  SECURITY.md
+CHANGELOG.md  ISSUE_TEMPLATE.md  prebuilds     src
+server/node_modules/bcrypt/examples:
+async_compare.js  forever_gen_salt.js
+server/node_modules/bcrypt/prebuilds:
+darwin-arm64  linux-arm    linux-x64    win32-x64
+darwin-x64    linux-arm64  win32-arm64
+server/node_modules/bcrypt/prebuilds/darwin-arm64:
+bcrypt.node
+server/node_modules/bcrypt/prebuilds/darwin-x64:
+bcrypt.node
+server/node_modules/bcrypt/prebuilds/linux-arm:
+bcrypt.glibc.node  bcrypt.musl.node
+server/node_modules/bcrypt/prebuilds/linux-arm64:
+bcrypt.glibc.node  bcrypt.musl.node
+server/node_modules/bcrypt/prebuilds/linux-x64:
+bcrypt.glibc.node  bcrypt.musl.node
+server/node_modules/bcrypt/prebuilds/win32-arm64:
+bcrypt.node
+server/node_modules/bcrypt/prebuilds/win32-x64:
+bcrypt.node
+server/node_modules/bcrypt/src:
+bcrypt.cc  bcrypt_node.cc  blowfish.cc  node_blf.h
+server/node_modules/bcrypt/test:
+async.test.js           promise.test.js      sync.test.js
+implementation.test.js  repetitions.test.js
+server/node_modules/binary-extensions:
+binary-extensions.json       index.d.ts  license       readme.md
+binary-extensions.json.d.ts  index.js    package.json
+server/node_modules/body-parser:
+index.js  lib  LICENSE  package.json  README.md
+server/node_modules/body-parser/lib:
+read.js  types  utils.js
+server/node_modules/body-parser/lib/types:
+json.js  raw.js  text.js  urlencoded.js
+server/node_modules/brace-expansion:
+index.js  LICENSE  package.json  README.md
+server/node_modules/braces:
+index.js  lib  LICENSE  package.json  README.md
+server/node_modules/braces/lib:
+compile.js  constants.js  expand.js  parse.js  stringify.js  utils.js
+server/node_modules/bson:
+bson.d.ts  etc  lib  LICENSE.md  package.json  README.md  src
+server/node_modules/bson/etc:
+prepare.js
+server/node_modules/bson/lib:
+bson.bundle.js      bson.cjs.map  bson.node.mjs      bson.rn.cjs.map
+bson.bundle.js.map  bson.mjs      bson.node.mjs.map
+bson.cjs            bson.mjs.map  bson.rn.cjs
+server/node_modules/bson/src:
+binary.ts      db_ref.ts         index.ts    objectid.ts    timestamp.ts
+bson.ts        decimal128.ts     int_32.ts   parser         utils
+bson_value.ts  double.ts         long.ts     parse_utf8.ts
+code.ts        error.ts          max_key.ts  regexp.ts
+constants.ts   extended_json.ts  min_key.ts  symbol.ts
+server/node_modules/bson/src/parser:
+calculate_size.ts  deserializer.ts  on_demand  serializer.ts  utils.ts
+server/node_modules/bson/src/parser/on_demand:
+index.ts  parse_to_elements.ts
+server/node_modules/bson/src/utils:
+byte_utils.ts  node_byte_utils.ts  string_utils.ts
+latin.ts       number_utils.ts     web_byte_utils.ts
+server/node_modules/buffer-equal-constant-time:
+index.js  LICENSE.txt  package.json  README.md  test.js
+server/node_modules/buffer-from:
+index.js  LICENSE  package.json  readme.md
+server/node_modules/busboy:
+bench  lib  LICENSE  package.json  README.md  test
+server/node_modules/busboy/bench:
+bench-multipart-fields-100mb-big.js
+bench-multipart-fields-100mb-small.js
+bench-multipart-files-100mb-big.js
+bench-multipart-files-100mb-small.js
+bench-urlencoded-fields-100pairs-small.js
+bench-urlencoded-fields-900pairs-small-alt.js
+server/node_modules/busboy/lib:
+index.js  types  utils.js
+server/node_modules/busboy/lib/types:
+multipart.js  urlencoded.js
+server/node_modules/busboy/test:
+common.js                         test-types-multipart.js
+test.js                           test-types-multipart-stream-pause.js
+test-types-multipart-charsets.js  test-types-urlencoded.js
+server/node_modules/bytes:
+History.md  index.js  LICENSE  package.json  Readme.md
+server/node_modules/call-bind-apply-helpers:
+actualApply.d.ts  functionApply.d.ts  index.js           reflectApply.js
+actualApply.js    functionApply.js    LICENSE            test
+applyBind.d.ts    functionCall.d.ts   package.json       tsconfig.json
+applyBind.js      functionCall.js     README.md
+CHANGELOG.md      index.d.ts          reflectApply.d.ts
+server/node_modules/call-bind-apply-helpers/test:
+index.js
+server/node_modules/call-bound:
+CHANGELOG.md  index.js  package.json  test
+index.d.ts    LICENSE   README.md     tsconfig.json
+server/node_modules/call-bound/test:
+index.js
+server/node_modules/chokidar:
+index.js  lib  LICENSE  package.json  README.md  types
+server/node_modules/chokidar/lib:
+constants.js  fsevents-handler.js  nodefs-handler.js
+server/node_modules/chokidar/types:
+index.d.ts
+server/node_modules/concat-map:
+example  index.js  LICENSE  package.json  README.markdown  test
+server/node_modules/concat-map/example:
+map.js
+server/node_modules/concat-map/test:
+map.js
+server/node_modules/concat-stream:
+index.js  LICENSE  package.json  readme.md
+server/node_modules/content-disposition:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/content-type:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/cookie:
+index.js  LICENSE  package.json  README.md  SECURITY.md
+server/node_modules/cookie-signature:
+History.md  index.js  LICENSE  package.json  Readme.md
+server/node_modules/cors:
+CONTRIBUTING.md  HISTORY.md  lib  LICENSE  package.json  README.md
+server/node_modules/cors/lib:
+index.js
+server/node_modules/debug:
+LICENSE  package.json  README.md  src
+server/node_modules/debug/src:
+browser.js  common.js  index.js  node.js
+server/node_modules/depd:
+History.md  index.js  lib  LICENSE  package.json  Readme.md
+server/node_modules/depd/lib:
+browser
+server/node_modules/depd/lib/browser:
+index.js
+server/node_modules/dotenv:
+CHANGELOG.md  config.js  LICENSE       README-es.md  SECURITY.md
+config.d.ts   lib        package.json  README.md
+server/node_modules/dotenv/lib:
+cli-options.js  env-options.js  main.d.ts  main.js
+server/node_modules/dunder-proto:
+CHANGELOG.md  get.js   package.json  set.d.ts  test
+get.d.ts      LICENSE  README.md     set.js    tsconfig.json
+server/node_modules/dunder-proto/test:
+get.js  index.js  set.js
+server/node_modules/ecdsa-sig-formatter:
+CODEOWNERS  LICENSE  package.json  README.md  src
+server/node_modules/ecdsa-sig-formatter/src:
+ecdsa-sig-formatter.d.ts  ecdsa-sig-formatter.js  param-bytes-for-alg.js
+server/node_modules/ee-first:
+index.js  LICENSE  package.json  README.md
+server/node_modules/encodeurl:
+index.js  LICENSE  package.json  README.md
+server/node_modules/escape-html:
+index.js  LICENSE  package.json  Readme.md
+server/node_modules/es-define-property:
+CHANGELOG.md  index.js  package.json  test
+index.d.ts    LICENSE   README.md     tsconfig.json
+server/node_modules/es-define-property/test:
+index.js
+server/node_modules/es-errors:
+CHANGELOG.md  index.js      range.js   syntax.d.ts    type.d.ts
+eval.d.ts     LICENSE       README.md  syntax.js      type.js
+eval.js       package.json  ref.d.ts   test           uri.d.ts
+index.d.ts    range.d.ts    ref.js     tsconfig.json  uri.js
+server/node_modules/es-errors/test:
+index.js
+server/node_modules/es-object-atoms:
+CHANGELOG.md   isObject.js   RequireObjectCoercible.d.ts  ToObject.js
+index.d.ts     LICENSE       RequireObjectCoercible.js    tsconfig.json
+index.js       package.json  test
+isObject.d.ts  README.md     ToObject.d.ts
+server/node_modules/es-object-atoms/test:
+index.js
+server/node_modules/etag:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/express:
+index.js  lib  LICENSE  package.json  Readme.md
+server/node_modules/express/lib:
+application.js  express.js  request.js  response.js  utils.js  view.js
+server/node_modules/fill-range:
+index.js  LICENSE  package.json  README.md
+server/node_modules/finalhandler:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/forwarded:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/fresh:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/function-bind:
+CHANGELOG.md       index.js  package.json  test
+implementation.js  LICENSE   README.md
+server/node_modules/function-bind/test:
+index.js
+server/node_modules/get-intrinsic:
+CHANGELOG.md  index.js  LICENSE  package.json  README.md  test
+server/node_modules/get-intrinsic/test:
+GetIntrinsic.js
+server/node_modules/get-proto:
+CHANGELOG.md  Object.getPrototypeOf.d.ts  Reflect.getPrototypeOf.d.ts
+index.d.ts    Object.getPrototypeOf.js    Reflect.getPrototypeOf.js
+index.js      package.json                test
+LICENSE       README.md                   tsconfig.json
+server/node_modules/get-proto/test:
+index.js
+server/node_modules/glob-parent:
+CHANGELOG.md  index.js  LICENSE  package.json  README.md
+server/node_modules/gopd:
+CHANGELOG.md  gOPD.js     index.js  package.json  test
+gOPD.d.ts     index.d.ts  LICENSE   README.md     tsconfig.json
+server/node_modules/gopd/test:
+index.js
+server/node_modules/has-flag:
+index.js  license  package.json  readme.md
+server/node_modules/hasown:
+CHANGELOG.md  index.js  package.json  tsconfig.json
+index.d.ts    LICENSE   README.md
+server/node_modules/has-symbols:
+CHANGELOG.md  index.js  package.json  shams.d.ts  test
+index.d.ts    LICENSE   README.md     shams.js    tsconfig.json
+server/node_modules/has-symbols/test:
+index.js  shams  tests.js
+server/node_modules/has-symbols/test/shams:
+core-js.js  get-own-property-symbols.js
+server/node_modules/http-errors:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/iconv-lite:
+encodings  lib  LICENSE  package.json  README.md  types
+server/node_modules/iconv-lite/encodings:
+dbcs-codec.js  internal.js             sbcs-data.js  utf32.js
+dbcs-data.js   sbcs-codec.js           tables        utf7.js
+index.js       sbcs-data-generated.js  utf16.js
+server/node_modules/iconv-lite/encodings/tables:
+big5-added.json  cp949.json  eucjp.json           gbk-added.json
+cp936.json       cp950.json  gb18030-ranges.json  shiftjis.json
+server/node_modules/iconv-lite/lib:
+bom-handling.js  helpers  index.d.ts  index.js  streams.js
+server/node_modules/iconv-lite/lib/helpers:
+merge-exports.js
+server/node_modules/iconv-lite/types:
+encodings.d.ts
+server/node_modules/ignore-by-default:
+index.js  LICENSE  package.json  README.md
+server/node_modules/inherits:
+inherits_browser.js  inherits.js  LICENSE  package.json  README.md
+server/node_modules/ipaddr.js:
+ipaddr.min.js  lib  LICENSE  package.json  README.md
+server/node_modules/ipaddr.js/lib:
+ipaddr.js  ipaddr.js.d.ts
+server/node_modules/is-binary-path:
+index.d.ts  index.js  license  package.json  readme.md
+server/node_modules/is-extglob:
+index.js  LICENSE  package.json  README.md
+server/node_modules/is-glob:
+index.js  LICENSE  package.json  README.md
+server/node_modules/is-number:
+index.js  LICENSE  package.json  README.md
+server/node_modules/is-promise:
+index.d.ts  index.js  index.mjs  LICENSE  package.json  readme.md
+server/node_modules/jsonwebtoken:
+decode.js  index.js  lib  LICENSE  package.json  README.md  sign.js  verify.js
+server/node_modules/jsonwebtoken/lib:
+asymmetricKeyDetailsSupported.js  rsaPssKeyDetailsSupported.js
+JsonWebTokenError.js              timespan.js
+NotBeforeError.js                 TokenExpiredError.js
+psSupported.js                    validateAsymmetricKey.js
+server/node_modules/jwa:
+index.js  LICENSE  opslevel.yml  package.json  README.md
+server/node_modules/jws:
+CHANGELOG.md  index.js  lib  LICENSE  opslevel.yml  package.json  readme.md
+server/node_modules/jws/lib:
+data-stream.js  sign-stream.js  tostring.js  verify-stream.js
+server/node_modules/kareem:
+CHANGELOG.md  index.d.ts  LICENSE       README.md
+coverage      index.js    package.json  SECURITY.md
+server/node_modules/kareem/coverage:
+lcov.info  lcov-report
+server/node_modules/kareem/coverage/lcov-report:
+base.css             index.html     prettify.js
+block-navigation.js  index.js.html  sort-arrow-sprite.png
+favicon.png          prettify.css   sorter.js
+server/node_modules/lodash.includes:
+index.js  LICENSE  package.json  README.md
+server/node_modules/lodash.isboolean:
+index.js  LICENSE  package.json  README.md
+server/node_modules/lodash.isinteger:
+index.js  LICENSE  package.json  README.md
+server/node_modules/lodash.isnumber:
+index.js  LICENSE  package.json  README.md
+server/node_modules/lodash.isplainobject:
+index.js  LICENSE  package.json  README.md
+server/node_modules/lodash.isstring:
+index.js  LICENSE  package.json  README.md
+server/node_modules/lodash.once:
+index.js  LICENSE  package.json  README.md
+server/node_modules/math-intrinsics:
+abs.d.ts       isFinite.js          LICENSE   package.json  sign.js
+abs.js         isInteger.d.ts       max.d.ts  pow.d.ts      test
+CHANGELOG.md   isInteger.js         max.js    pow.js        tsconfig.json
+constants      isNaN.d.ts           min.d.ts  README.md
+floor.d.ts     isNaN.js             min.js    round.d.ts
+floor.js       isNegativeZero.d.ts  mod.d.ts  round.js
+isFinite.d.ts  isNegativeZero.js    mod.js    sign.d.ts
+server/node_modules/math-intrinsics/constants:
+maxArrayLength.d.ts  maxSafeInteger.d.ts  maxValue.d.ts
+maxArrayLength.js    maxSafeInteger.js    maxValue.js
+server/node_modules/math-intrinsics/test:
+index.js
+server/node_modules/media-typer:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/memory-pager:
+index.js  LICENSE  package.json  README.md  test.js
+server/node_modules/merge-descriptors:
+index.d.ts  index.js  license  package.json  readme.md
+server/node_modules/mime-db:
+db.json  HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/mime-types:
+HISTORY.md  index.js  LICENSE  mimeScore.js  package.json  README.md
+server/node_modules/minimatch:
+LICENSE  minimatch.js  package.json  README.md
+server/node_modules/minimist:
+CHANGELOG.md  example  index.js  LICENSE  package.json  README.md  test
+server/node_modules/minimist/example:
+parse.js
+server/node_modules/minimist/test:
+all_bool.js  default_bool.js  long.js   parse_modified.js  stop_early.js
+bool.js      dotted.js        num.js    proto.js           unknown.js
+dash.js      kv_short.js      parse.js  short.js           whitespace.js
+server/node_modules/mkdirp:
+bin  index.js  LICENSE  package.json  readme.markdown
+server/node_modules/mkdirp/bin:
+cmd.js  usage.txt
+server/node_modules/mongodb:
+etc  lib  LICENSE.md  mongodb.d.ts  package.json  README.md  src  tsconfig.json
+server/node_modules/mongodb/etc:
+prepare.js
+server/node_modules/mongodb/lib:
+admin.js                  index.js.map
+admin.js.map              mongo_client_auth_providers.js
+bson.js                   mongo_client_auth_providers.js.map
+bson.js.map               mongo_client.js
+bulk                      mongo_client.js.map
+change_stream.js          mongo_logger.js
+change_stream.js.map      mongo_logger.js.map
+client-side-encryption    mongo_types.js
+cmap                      mongo_types.js.map
+collection.js             operations
+collection.js.map         read_concern.js
+connection_string.js      read_concern.js.map
+connection_string.js.map  read_preference.js
+constants.js              read_preference.js.map
+constants.js.map          sdam
+cursor                    sessions.js
+db.js                     sessions.js.map
+db.js.map                 sort.js
+deps.js                   sort.js.map
+deps.js.map               timeout.js
+encrypter.js              timeout.js.map
+encrypter.js.map          transactions.js
+error.js                  transactions.js.map
+error.js.map              utils.js
+explain.js                utils.js.map
+explain.js.map            write_concern.js
+gridfs                    write_concern.js.map
+index.js
+server/node_modules/mongodb/lib/bulk:
+common.js      ordered.js      unordered.js
+common.js.map  ordered.js.map  unordered.js.map
+server/node_modules/mongodb/lib/client-side-encryption:
+auto_encrypter.js         errors.js                   providers
+auto_encrypter.js.map     errors.js.map               state_machine.js
+client_encryption.js      mongocryptd_manager.js      state_machine.js.map
+client_encryption.js.map  mongocryptd_manager.js.map
+server/node_modules/mongodb/lib/client-side-encryption/providers:
+aws.js      azure.js      gcp.js      index.js
+aws.js.map  azure.js.map  gcp.js.map  index.js.map
+server/node_modules/mongodb/lib/cmap:
+auth                              connect.js
+command_monitoring_events.js      connect.js.map
+command_monitoring_events.js.map  errors.js
+commands.js                       errors.js.map
+commands.js.map                   handshake
+connection.js                     metrics.js
+connection.js.map                 metrics.js.map
+connection_pool_events.js         stream_description.js
+connection_pool_events.js.map     stream_description.js.map
+connection_pool.js                wire_protocol
+connection_pool.js.map
+server/node_modules/mongodb/lib/cmap/auth:
+auth_provider.js                  mongo_credentials.js.map  plain.js.map
+auth_provider.js.map              mongodb_aws.js            providers.js
+aws_temporary_credentials.js      mongodb_aws.js.map        providers.js.map
+aws_temporary_credentials.js.map  mongodb_oidc              scram.js
+gssapi.js                         mongodb_oidc.js           scram.js.map
+gssapi.js.map                     mongodb_oidc.js.map       x509.js
+mongo_credentials.js              plain.js                  x509.js.map
+server/node_modules/mongodb/lib/cmap/auth/mongodb_oidc:
+automated_callback_workflow.js      gcp_machine_workflow.js.map
+automated_callback_workflow.js.map  human_callback_workflow.js
+azure_machine_workflow.js           human_callback_workflow.js.map
+azure_machine_workflow.js.map       k8s_machine_workflow.js
+callback_workflow.js                k8s_machine_workflow.js.map
+callback_workflow.js.map            token_cache.js
+command_builders.js                 token_cache.js.map
+command_builders.js.map             token_machine_workflow.js
+gcp_machine_workflow.js             token_machine_workflow.js.map
+server/node_modules/mongodb/lib/cmap/handshake:
+client_metadata.js  client_metadata.js.map
+server/node_modules/mongodb/lib/cmap/wire_protocol:
+compression.js      constants.js.map  on_demand         shared.js
+compression.js.map  on_data.js        responses.js      shared.js.map
+constants.js        on_data.js.map    responses.js.map
+server/node_modules/mongodb/lib/cmap/wire_protocol/on_demand:
+document.js  document.js.map
+server/node_modules/mongodb/lib/cursor:
+abstract_cursor.js               find_cursor.js
+abstract_cursor.js.map           find_cursor.js.map
+aggregation_cursor.js            list_collections_cursor.js
+aggregation_cursor.js.map        list_collections_cursor.js.map
+change_stream_cursor.js          list_indexes_cursor.js
+change_stream_cursor.js.map      list_indexes_cursor.js.map
+client_bulk_write_cursor.js      list_search_indexes_cursor.js
+client_bulk_write_cursor.js.map  list_search_indexes_cursor.js.map
+explainable_cursor.js            run_command_cursor.js
+explainable_cursor.js.map        run_command_cursor.js.map
+server/node_modules/mongodb/lib/gridfs:
+download.js  download.js.map  index.js  index.js.map  upload.js  upload.js.map
+server/node_modules/mongodb/lib/operations:
+aggregate.js                     indexes.js.map
+aggregate.js.map                 insert.js
+client_bulk_write                insert.js.map
+command.js                       kill_cursors.js
+command.js.map                   kill_cursors.js.map
+count.js                         list_collections.js
+count.js.map                     list_collections.js.map
+create_collection.js             list_databases.js
+create_collection.js.map         list_databases.js.map
+delete.js                        operation.js
+delete.js.map                    operation.js.map
+distinct.js                      profiling_level.js
+distinct.js.map                  profiling_level.js.map
+drop.js                          remove_user.js
+drop.js.map                      remove_user.js.map
+end_sessions.js                  rename.js
+end_sessions.js.map              rename.js.map
+estimated_document_count.js      run_command.js
+estimated_document_count.js.map  run_command.js.map
+execute_operation.js             search_indexes
+execute_operation.js.map         set_profiling_level.js
+find_and_modify.js               set_profiling_level.js.map
+find_and_modify.js.map           stats.js
+find.js                          stats.js.map
+find.js.map                      update.js
+get_more.js                      update.js.map
+get_more.js.map                  validate_collection.js
+indexes.js                       validate_collection.js.map
+server/node_modules/mongodb/lib/operations/client_bulk_write:
+client_bulk_write.js      common.js        results_merger.js
+client_bulk_write.js.map  common.js.map    results_merger.js.map
+command_builder.js        executor.js
+command_builder.js.map    executor.js.map
+server/node_modules/mongodb/lib/operations/search_indexes:
+create.js  create.js.map  drop.js  drop.js.map  update.js  update.js.map
+server/node_modules/mongodb/lib/sdam:
+common.js                  server_selection_events.js
+common.js.map              server_selection_events.js.map
+events.js                  server_selection.js
+events.js.map              server_selection.js.map
+monitor.js                 srv_polling.js
+monitor.js.map             srv_polling.js.map
+server_description.js      topology_description.js
+server_description.js.map  topology_description.js.map
+server.js                  topology.js
+server.js.map              topology.js.map
+server/node_modules/mongodb/src:
+admin.ts                deps.ts                         read_concern.ts
+bson.ts                 encrypter.ts                    read_preference.ts
+bulk                    error.ts                        sdam
+change_stream.ts        explain.ts                      sessions.ts
+client-side-encryption  gridfs                          sort.ts
+cmap                    index.ts                        timeout.ts
+collection.ts           mongo_client_auth_providers.ts  transactions.ts
+connection_string.ts    mongo_client.ts                 utils.ts
+constants.ts            mongo_logger.ts                 write_concern.ts
+cursor                  mongo_types.ts
+db.ts                   operations
+server/node_modules/mongodb/src/bulk:
+common.ts  ordered.ts  unordered.ts
+server/node_modules/mongodb/src/client-side-encryption:
+auto_encrypter.ts     errors.ts               providers
+client_encryption.ts  mongocryptd_manager.ts  state_machine.ts
+server/node_modules/mongodb/src/client-side-encryption/providers:
+aws.ts  azure.ts  gcp.ts  index.ts
+server/node_modules/mongodb/src/cmap:
+auth                          connection_pool.ts  handshake
+command_monitoring_events.ts  connection.ts       metrics.ts
+commands.ts                   connect.ts          stream_description.ts
+connection_pool_events.ts     errors.ts           wire_protocol
+server/node_modules/mongodb/src/cmap/auth:
+auth_provider.ts              mongo_credentials.ts  mongodb_oidc.ts  scram.ts
+aws_temporary_credentials.ts  mongodb_aws.ts        plain.ts         x509.ts
+gssapi.ts                     mongodb_oidc          providers.ts
+server/node_modules/mongodb/src/cmap/auth/mongodb_oidc:
+automated_callback_workflow.ts  human_callback_workflow.ts
+azure_machine_workflow.ts       k8s_machine_workflow.ts
+callback_workflow.ts            token_cache.ts
+command_builders.ts             token_machine_workflow.ts
+gcp_machine_workflow.ts
+server/node_modules/mongodb/src/cmap/handshake:
+client_metadata.ts
+server/node_modules/mongodb/src/cmap/wire_protocol:
+compression.ts  constants.ts  on_data.ts  on_demand  responses.ts  shared.ts
+server/node_modules/mongodb/src/cmap/wire_protocol/on_demand:
+document.ts
+server/node_modules/mongodb/src/cursor:
+abstract_cursor.ts           find_cursor.ts
+aggregation_cursor.ts        list_collections_cursor.ts
+change_stream_cursor.ts      list_indexes_cursor.ts
+client_bulk_write_cursor.ts  list_search_indexes_cursor.ts
+explainable_cursor.ts        run_command_cursor.ts
+server/node_modules/mongodb/src/gridfs:
+download.ts  index.ts  upload.ts
+server/node_modules/mongodb/src/operations:
+aggregate.ts                 execute_operation.ts  profiling_level.ts
+client_bulk_write            find_and_modify.ts    remove_user.ts
+command.ts                   find.ts               rename.ts
+count.ts                     get_more.ts           run_command.ts
+create_collection.ts         indexes.ts            search_indexes
+delete.ts                    insert.ts             set_profiling_level.ts
+distinct.ts                  kill_cursors.ts       stats.ts
+drop.ts                      list_collections.ts   update.ts
+end_sessions.ts              list_databases.ts     validate_collection.ts
+estimated_document_count.ts  operation.ts
+server/node_modules/mongodb/src/operations/client_bulk_write:
+client_bulk_write.ts  common.ts    results_merger.ts
+command_builder.ts    executor.ts
+server/node_modules/mongodb/src/operations/search_indexes:
+create.ts  drop.ts  update.ts
+server/node_modules/mongodb/src/sdam:
+common.ts   server_description.ts       server.ts                topology.ts
+events.ts   server_selection_events.ts  srv_polling.ts
+monitor.ts  server_selection.ts         topology_description.ts
+server/node_modules/mongodb-connection-string-url:
+lib  LICENSE  package.json  README.md
+server/node_modules/mongodb-connection-string-url/lib:
+index.d.ts  index.js  index.js.map  redact.d.ts  redact.js  redact.js.map
+server/node_modules/@mongodb-js:
+saslprep
+server/node_modules/@mongodb-js/saslprep:
+dist  LICENSE  package.json  readme.md
+server/node_modules/@mongodb-js/saslprep/dist:
+browser.d.ts                       generate-code-points.js
+browser.d.ts.map                   generate-code-points.js.map
+browser.js                         index.d.ts
+browser.js.map                     index.d.ts.map
+code-points-data-browser.d.ts      index.js
+code-points-data-browser.d.ts.map  index.js.map
+code-points-data-browser.js        memory-code-points.d.ts
+code-points-data-browser.js.map    memory-code-points.d.ts.map
+code-points-data.d.ts              memory-code-points.js
+code-points-data.d.ts.map          memory-code-points.js.map
+code-points-data.js                node.d.ts
+code-points-data.js.map            node.d.ts.map
+code-points-src.d.ts               node.js
+code-points-src.d.ts.map           node.js.map
+code-points-src.js                 util.d.ts
+code-points-src.js.map             util.d.ts.map
+generate-code-points.d.ts          util.js
+generate-code-points.d.ts.map      util.js.map
+server/node_modules/mongoose:
+eslint.config.mjs  lib         package.json  SECURITY.md
+index.js           LICENSE.md  README.md     types
+server/node_modules/mongoose/lib:
+aggregate.js        document.js  modifiedPathsSnapshot.js  schema.js
+cast                driver.js    mongoose.js               schemaType.js
+cast.js             drivers      options                   stateMachine.js
+collection.js       error        options.js                types
+connection.js       helpers      plugins                   utils.js
+connectionState.js  index.js     queryHelpers.js           validOptions.js
+constants.js        internal.js  query.js                  virtualType.js
+cursor              model.js     schema
+server/node_modules/mongoose/lib/cast:
+bigint.js   date.js        double.js  number.js    string.js
+boolean.js  decimal128.js  int32.js   objectid.js  uuid.js
+server/node_modules/mongoose/lib/cursor:
+aggregationCursor.js  changeStream.js  queryCursor.js
+server/node_modules/mongoose/lib/drivers:
+node-mongodb-native  SPEC.md
+server/node_modules/mongoose/lib/drivers/node-mongodb-native:
+bulkWriteResult.js  collection.js  connection.js  index.js
+server/node_modules/mongoose/lib/error:
+browserMissingSchema.js     messages.js          serverSelection.js
+bulkSaveIncompleteError.js  missingSchema.js     setOptionError.js
+bulkWriteError.js           mongooseError.js     strict.js
+cast.js                     notFound.js          strictPopulate.js
+createCollectionsError.js   objectExpected.js    syncIndexes.js
+divergentArray.js           objectParameter.js   validation.js
+eachAsyncMultiError.js      overwriteModel.js    validator.js
+index.js                    parallelSave.js      version.js
+invalidSchemaOption.js      parallelValidate.js
+server/node_modules/mongoose/lib/helpers:
+aggregate                          isSimpleValidator.js
+arrayDepth.js                      minimize.js
+clone.js                           model
+common.js                          omitUndefined.js
+createJSONSchemaTypeDefinition.js  once.js
+cursor                             parallelLimit.js
+discriminator                      path
+document                           pluralize.js
+each.js                            populate
+error                              printJestWarning.js
+firstKey.js                        processConnectionOptions.js
+getConstructorName.js              projection
+getDefaultBulkwriteResult.js       query
+getFunctionName.js                 schema
+get.js                             schematype
+immediate.js                       setDefaultsOnInsert.js
+indexes                            specialProperties.js
+isAsyncFunction.js                 symbols.js
+isBsonType.js                      timers.js
+isMongooseObject.js                timestamps
+isObject.js                        topology
+isPOJO.js                          update
+isPromise.js                       updateValidators.js
+server/node_modules/mongoose/lib/helpers/aggregate:
+prepareDiscriminatorPipeline.js  stringifyFunctionOperators.js
+server/node_modules/mongoose/lib/helpers/cursor:
+eachAsync.js
+server/node_modules/mongoose/lib/helpers/discriminator:
+applyEmbeddedDiscriminators.js              getDiscriminatorByValue.js
+areDiscriminatorValuesEqual.js              getSchemaDiscriminatorByValue.js
+checkEmbeddedDiscriminatorKeyProjection.js  mergeDiscriminatorSchema.js
+getConstructor.js
+server/node_modules/mongoose/lib/helpers/document:
+applyDefaults.js          compile.js
+applyTimestamps.js        getDeepestSubdocumentForPath.js
+applyVirtuals.js          getEmbeddedDiscriminatorPath.js
+cleanModifiedSubpaths.js  handleSpreadDoc.js
+server/node_modules/mongoose/lib/helpers/error:
+combinePathErrors.js
+server/node_modules/mongoose/lib/helpers/indexes:
+applySchemaCollation.js               isDefaultIdIndex.js  isTextIndex.js
+decorateDiscriminatorIndexOptions.js  isIndexEqual.js      isTimeseriesIndex.js
+getRelatedIndexes.js                  isIndexSpecEqual.js
+server/node_modules/mongoose/lib/helpers/model:
+applyDefaultsToPOJO.js  applyStaticHooks.js  decorateBulkWriteResult.js
+applyHooks.js           applyStatics.js      discriminator.js
+applyMethods.js         castBulkWrite.js     pushNestedArrayPaths.js
+server/node_modules/mongoose/lib/helpers/path:
+parentPaths.js  setDottedPath.js
+server/node_modules/mongoose/lib/helpers/populate:
+assignRawDocsToIdStructure.js  lookupLocalFields.js
+assignVals.js                  markArraySubdocsPopulated.js
+createPopulateQueryFilter.js   modelNamesFromRefPath.js
+getModelsMapForPopulate.js     removeDeselectedForeignField.js
+getSchemaTypes.js              setPopulatedVirtualValue.js
+getVirtual.js                  skipPopulateValue.js
+leanPopulateMap.js             validateRef.js
+server/node_modules/mongoose/lib/helpers/projection:
+applyProjection.js       isInclusive.js              isSubpath.js
+hasIncludedChildren.js   isNestedProjection.js       parseProjection.js
+isDefiningProjection.js  isPathExcluded.js
+isExclusive.js           isPathSelectedInclusive.js
+server/node_modules/mongoose/lib/helpers/query:
+ applyGlobalOption.js              hasDollarKeys.js
+'cast$expr.js'                     isOperator.js
+ castFilterPath.js                 sanitizeFilter.js
+ castUpdate.js                     sanitizeProjection.js
+ getEmbeddedDiscriminatorPath.js   selectPopulatedFields.js
+ handleImmutable.js                trusted.js
+ handleReadPreferenceAliases.js    validOps.js
+server/node_modules/mongoose/lib/helpers/schema:
+addAutoId.js            cleanPositionalOperators.js   handleIdOption.js
+applyBuiltinPlugins.js  getIndexes.js                 handleTimestampOption.js
+applyPlugins.js         getKeysInSchemaOrder.js       idGetter.js
+applyReadConcern.js     getPath.js                    merge.js
+applyWriteConcern.js    getSubdocumentStrictValue.js
+server/node_modules/mongoose/lib/helpers/schematype:
+handleImmutable.js
+server/node_modules/mongoose/lib/helpers/timestamps:
+setDocumentTimestamps.js  setupTimestamps.js
+server/node_modules/mongoose/lib/helpers/topology:
+allServersUnknown.js  isAtlas.js  isSSLError.js
+server/node_modules/mongoose/lib/helpers/update:
+applyTimestampsToChildren.js     modifiedPaths.js
+applyTimestampsToUpdate.js       moveImmutableProperties.js
+castArrayFilters.js              removeUnusedArrayFilters.js
+decorateUpdateWithVersionKey.js  updatedPathsByArrayFilter.js
+server/node_modules/mongoose/lib/options:
+populateOptions.js             schemaNumberOptions.js
+propertyOptions.js             schemaObjectIdOptions.js
+saveOptions.js                 schemaStringOptions.js
+schemaArrayOptions.js          schemaSubdocumentOptions.js
+schemaBufferOptions.js         schemaTypeOptions.js
+schemaDateOptions.js           schemaUnionOptions.js
+schemaDocumentArrayOptions.js  virtualOptions.js
+schemaMapOptions.js
+server/node_modules/mongoose/lib/plugins:
+index.js        sharding.js          validateBeforeSave.js
+saveSubdocs.js  trackTransaction.js
+server/node_modules/mongoose/lib/schema:
+array.js    decimal128.js            int32.js     operators       uuid.js
+bigint.js   documentArrayElement.js  map.js       string.js
+boolean.js  documentArray.js         mixed.js     subdocument.js
+buffer.js   double.js                number.js    symbols.js
+date.js     index.js                 objectId.js  union.js
+server/node_modules/mongoose/lib/schema/operators:
+bitwise.js  exists.js  geospatial.js  helpers.js  text.js  type.js
+server/node_modules/mongoose/lib/types:
+array                decimal128.js  index.js     subdocument.js
+arraySubdocument.js  documentArray  map.js       uuid.js
+buffer.js            double.js      objectid.js
+server/node_modules/mongoose/lib/types/array:
+index.js  isMongooseArray.js  methods
+server/node_modules/mongoose/lib/types/array/methods:
+index.js
+server/node_modules/mongoose/lib/types/documentArray:
+index.js  isMongooseDocumentArray.js  methods
+server/node_modules/mongoose/lib/types/documentArray/methods:
+index.js
+server/node_modules/mongoose/types:
+aggregate.d.ts      index.d.ts                 query.d.ts
+augmentations.d.ts  indexes.d.ts               schemaoptions.d.ts
+callback.d.ts       inferhydrateddoctype.d.ts  schematypes.d.ts
+collection.d.ts     inferrawdoctype.d.ts       session.d.ts
+connection.d.ts     inferschematype.d.ts       types.d.ts
+cursor.d.ts         middlewares.d.ts           utility.d.ts
+document.d.ts       models.d.ts                validation.d.ts
+error.d.ts          mongooseoptions.d.ts       virtuals.d.ts
+expressions.d.ts    pipelinestage.d.ts
+helpers.d.ts        populate.d.ts
+server/node_modules/mpath:
+History.md  index.js  lib  LICENSE  package.json  README.md  SECURITY.md  test
+server/node_modules/mpath/lib:
+index.js  stringToParts.js
+server/node_modules/mpath/test:
+index.js  stringToParts.js
+server/node_modules/mquery:
+History.md  lib  LICENSE  package.json  README.md  SECURITY.md
+server/node_modules/mquery/lib:
+collection  env.js  mquery.js  permissions.js  utils.js
+server/node_modules/mquery/lib/collection:
+collection.js  index.js  node.js
+server/node_modules/ms:
+index.js  license.md  package.json  readme.md
+server/node_modules/multer:
+index.js  lib  LICENSE  node_modules  package.json  README.md  storage
+server/node_modules/multer/lib:
+counter.js        make-middleware.js  remove-uploaded-files.js
+file-appender.js  multer-error.js
+server/node_modules/multer/node_modules:
+media-typer  mime-db  mime-types  type-is
+server/node_modules/multer/node_modules/media-typer:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/multer/node_modules/mime-db:
+db.json  HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/multer/node_modules/mime-types:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/multer/node_modules/type-is:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/multer/storage:
+disk.js  memory.js
+server/node_modules/negotiator:
+HISTORY.md  index.js  lib  LICENSE  package.json  README.md
+server/node_modules/negotiator/lib:
+charset.js  encoding.js  language.js  mediaType.js
+server/node_modules/node-addon-api:
+common.gypi  napi.h                 node_api.gyp   package-support.json
+except.gypi  napi-inl.deprecated.h  noexcept.gypi  README.md
+index.js     napi-inl.h             nothing.c      tools
+LICENSE.md   node_addon_api.gyp     package.json
+server/node_modules/node-addon-api/tools:
+check-napi.js  clang-format.js  conversion.js  README.md
+server/node_modules/node-gyp-build:
+bin.js         index.js  node-gyp-build.js  package.json  SECURITY.md
+build-test.js  LICENSE   optional.js        README.md
+server/node_modules/nodemon:
+bin  doc  index.d.ts  jsconfig.json  lib  LICENSE  package.json  README.md
+server/node_modules/nodemon/bin:
+nodemon.js  windows-kill.exe
+server/node_modules/nodemon/doc:
+cli
+server/node_modules/nodemon/doc/cli:
+authors.txt  help.txt  options.txt  usage.txt
+config.txt   logo.txt  topics.txt   whoami.txt
+server/node_modules/nodemon/lib:
+cli     help      monitor     rules     utils
+config  index.js  nodemon.js  spawn.js  version.js
+server/node_modules/nodemon/lib/cli:
+index.js  parse.js
+server/node_modules/nodemon/lib/config:
+command.js  defaults.js  exec.js  index.js  load.js
+server/node_modules/nodemon/lib/help:
+index.js
+server/node_modules/nodemon/lib/monitor:
+index.js  match.js  run.js  signals.js  watch.js
+server/node_modules/nodemon/lib/rules:
+add.js  index.js  parse.js
+server/node_modules/nodemon/lib/utils:
+bus.js  clone.js  colour.js  index.js  log.js  merge.js
+server/node_modules/normalize-path:
+index.js  LICENSE  package.json  README.md
+server/node_modules/object-assign:
+index.js  license  package.json  readme.md
+server/node_modules/object-inspect:
+CHANGELOG.md  index.js  package.json          readme.markdown  test-core-js.js
+example       LICENSE   package-support.json  test             util.inspect.js
+server/node_modules/object-inspect/example:
+all.js  circular.js  fn.js  inspect.js
+server/node_modules/object-inspect/test:
+bigint.js    element.js  global.js         inspect.js     toStringTag.js
+browser      err.js      has.js            lowbyte.js     undef.js
+circular.js  fakes.js    holes.js          number.js      values.js
+deep.js      fn.js       indent-option.js  quoteStyle.js
+server/node_modules/object-inspect/test/browser:
+dom.js
+server/node_modules/once:
+LICENSE  once.js  package.json  README.md
+server/node_modules/on-finished:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/parseurl:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/path-to-regexp:
+dist  LICENSE  package.json  Readme.md
+server/node_modules/path-to-regexp/dist:
+index.d.ts  index.js  index.js.map
+server/node_modules/picomatch:
+CHANGELOG.md  index.js  lib  LICENSE  package.json  README.md
+server/node_modules/picomatch/lib:
+constants.js  parse.js  picomatch.js  scan.js  utils.js
+server/node_modules/proxy-addr:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/pstree.remy:
+lib  LICENSE  package.json  README.md  tests
+server/node_modules/pstree.remy/lib:
+index.js  tree.js  utils.js
+server/node_modules/pstree.remy/tests:
+fixtures  index.test.js
+server/node_modules/pstree.remy/tests/fixtures:
+index.js  out1  out2
+server/node_modules/punycode:
+LICENSE-MIT.txt  package.json  punycode.es6.js  punycode.js  README.md
+server/node_modules/qs:
+CHANGELOG.md  eslint.config.mjs  LICENSE.md    README.md
+dist          lib                package.json  test
+server/node_modules/qs/dist:
+qs.js
+server/node_modules/qs/lib:
+formats.js  index.js  parse.js  stringify.js  utils.js
+server/node_modules/qs/test:
+empty-keys-cases.js  parse.js  stringify.js  utils.js
+server/node_modules/range-parser:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/raw-body:
+index.d.ts  index.js  LICENSE  package.json  README.md
+server/node_modules/readable-stream:
+CONTRIBUTING.md    experimentalWarning.js  LICENSE              readable.js
+errors-browser.js  GOVERNANCE.md           package.json         README.md
+errors.js          lib                     readable-browser.js
+server/node_modules/readable-stream/lib:
+internal           _stream_passthrough.js  _stream_transform.js
+_stream_duplex.js  _stream_readable.js     _stream_writable.js
+server/node_modules/readable-stream/lib/internal:
+streams
+server/node_modules/readable-stream/lib/internal/streams:
+async_iterator.js  end-of-stream.js  pipeline.js        stream.js
+buffer_list.js     from-browser.js   state.js
+destroy.js         from.js           stream-browser.js
+server/node_modules/readdirp:
+index.d.ts  index.js  LICENSE  package.json  README.md
+server/node_modules/router:
+HISTORY.md  index.js  lib  LICENSE  package.json  README.md
+server/node_modules/router/lib:
+layer.js  route.js
+server/node_modules/safe-buffer:
+index.d.ts  index.js  LICENSE  package.json  README.md
+server/node_modules/safer-buffer:
+dangerous.js  package.json       Readme.md  tests.js
+LICENSE       Porting-Buffer.md  safer.js
+server/node_modules/semver:
+bin      functions  internal  package.json  range.bnf  README.md
+classes  index.js   LICENSE   preload.js    ranges
+server/node_modules/semver/bin:
+semver.js
+server/node_modules/semver/classes:
+comparator.js  index.js  range.js  semver.js
+server/node_modules/semver/functions:
+clean.js          compare-loose.js  inc.js    neq.js         rsort.js
+cmp.js            diff.js           lte.js    parse.js       satisfies.js
+coerce.js         eq.js             lt.js     patch.js       sort.js
+compare-build.js  gte.js            major.js  prerelease.js  valid.js
+compare.js        gt.js             minor.js  rcompare.js
+server/node_modules/semver/internal:
+constants.js  debug.js  identifiers.js  lrucache.js  parse-options.js  re.js
+server/node_modules/semver/ranges:
+gtr.js         max-satisfying.js  outside.js   to-comparators.js
+intersects.js  min-satisfying.js  simplify.js  valid.js
+ltr.js         min-version.js     subset.js
+server/node_modules/send:
+index.js  LICENSE  package.json  README.md
+server/node_modules/serve-static:
+index.js  LICENSE  package.json  README.md
+server/node_modules/setprototypeof:
+index.d.ts  index.js  LICENSE  package.json  README.md  test
+server/node_modules/setprototypeof/test:
+index.js
+server/node_modules/side-channel:
+CHANGELOG.md  index.js  package.json  test
+index.d.ts    LICENSE   README.md     tsconfig.json
+server/node_modules/side-channel/test:
+index.js
+server/node_modules/side-channel-list:
+CHANGELOG.md  index.js  list.d.ts     README.md  tsconfig.json
+index.d.ts    LICENSE   package.json  test
+server/node_modules/side-channel-list/test:
+index.js
+server/node_modules/side-channel-map:
+CHANGELOG.md  index.js  package.json  test
+index.d.ts    LICENSE   README.md     tsconfig.json
+server/node_modules/side-channel-map/test:
+index.js
+server/node_modules/side-channel-weakmap:
+CHANGELOG.md  index.js  package.json  test
+index.d.ts    LICENSE   README.md     tsconfig.json
+server/node_modules/side-channel-weakmap/test:
+index.js
+server/node_modules/sift:
+es          index.js         package.json     sift.csp.min.js.map  src
+es5m        lib              README.md        sift.min.js
+index.d.ts  MIT-LICENSE.txt  sift.csp.min.js  sift.min.js.map
+server/node_modules/sift/es:
+index.js  index.js.map
+server/node_modules/sift/es5m:
+index.js  index.js.map
+server/node_modules/sift/lib:
+core.d.ts  index.d.ts  index.js  index.js.map  operations.d.ts  utils.d.ts
+server/node_modules/sift/src:
+core.ts  index.ts  operations.ts  utils.ts
+server/node_modules/simple-update-notifier:
+build  LICENSE  package.json  README.md  src
+server/node_modules/simple-update-notifier/build:
+index.d.ts  index.js
+server/node_modules/simple-update-notifier/src:
+borderedText.ts  getDistVersion.spec.ts  hasNewVersion.ts  isNpmOrYarn.ts
+cache.spec.ts    getDistVersion.ts       index.spec.ts     types.ts
+cache.ts         hasNewVersion.spec.ts   index.ts
+server/node_modules/sparse-bitfield:
+index.js  LICENSE  package.json  README.md  test.js
+server/node_modules/statuses:
+codes.json  HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/streamsearch:
+lib  LICENSE  package.json  README.md  test
+server/node_modules/streamsearch/lib:
+sbmh.js
+server/node_modules/streamsearch/test:
+test.js
+server/node_modules/string_decoder:
+lib  LICENSE  package.json  README.md
+server/node_modules/string_decoder/lib:
+string_decoder.js
+server/node_modules/supports-color:
+browser.js  index.js  license  package.json  readme.md
+server/node_modules/toidentifier:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/to-regex-range:
+index.js  LICENSE  package.json  README.md
+server/node_modules/touch:
+bin  index.js  LICENSE  package.json  README.md
+server/node_modules/touch/bin:
+nodetouch.js
+server/node_modules/tr46:
+index.js  lib  LICENSE.md  package.json  README.md
+server/node_modules/tr46/lib:
+mappingTable.json  regexes.js  statusMapping.js
+server/node_modules/typedarray:
+example  index.js  LICENSE  package.json  readme.markdown  test
+server/node_modules/typedarray/example:
+tarray.js
+server/node_modules/typedarray/test:
+server  tarray.js
+server/node_modules/typedarray/test/server:
+undef_globals.js
+server/node_modules/type-is:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/@types:
+webidl-conversions  whatwg-url
+server/node_modules/@types/webidl-conversions:
+index.d.ts  LICENSE  package.json  README.md
+server/node_modules/@types/whatwg-url:
+index.d.ts  lib  LICENSE  package.json  README.md  webidl2js-wrapper.d.ts
+server/node_modules/@types/whatwg-url/lib:
+URL.d.ts  URL-impl.d.ts  URLSearchParams.d.ts  URLSearchParams-impl.d.ts
+server/node_modules/undefsafe:
+example.js  lib  LICENSE  package.json  README.md
+server/node_modules/undefsafe/lib:
+undefsafe.js
+server/node_modules/unpipe:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/util-deprecate:
+browser.js  History.md  LICENSE  node.js  package.json  README.md
+server/node_modules/vary:
+HISTORY.md  index.js  LICENSE  package.json  README.md
+server/node_modules/webidl-conversions:
+lib  LICENSE.md  package.json  README.md
+server/node_modules/webidl-conversions/lib:
+index.js
+server/node_modules/whatwg-url:
+index.js  lib  LICENSE.txt  package.json  README.md  webidl2js-wrapper.js
+server/node_modules/whatwg-url/lib:
+encoding.js  percent-encoding.js  URL.js                   url-state-machine.js
+Function.js  urlencoded.js        URLSearchParams-impl.js  utils.js
+infra.js     URL-impl.js          URLSearchParams.js       VoidFunction.js
+server/node_modules/wrappy:
+LICENSE  package.json  README.md  wrappy.js
+server/node_modules/xtend:
+immutable.js  LICENSE  mutable.js  package.json  README.md  test.js
+server/uploads:
+chicken.jpg                                         shashlik.jpg
+e853a666-1026-441a-8b31-1ca767df1741-Photoroom.png  veg-grill.jpg
+lula.jpg                                            wings.png
+pork-shashlik.jpg
+server/utils:
+checkAdmin.js  checkAuth.js

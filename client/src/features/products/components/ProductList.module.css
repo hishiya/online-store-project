@@ -12,6 +12,55 @@
     padding-bottom: 10px;
 }
 
+.search {
+    width: 18%;
+    height: 30px;
+    margin-bottom: 30px;
+    color: #999;
+    font-size: 20px;
+    border-radius: 30px;
+    border: 0px;
+    background-color: white;
+    padding: 20px
+}
+
+.search:focus {
+    outline: none;
+}
+
+.content {
+    display: flex;
+    gap: 50px;
+}
+
+.list {
+    display: flex;
+    gap: 70px;
+}
+
+.food {
+    list-style: none;
+    font-size: 20px;
+    position: relative;
+}
+
+.food:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    display: block;
+    border-radius: 30px;
+    background-color: gray;
+    position: absolute;
+    left: -30px;
+    top: 9px;
+}
+
+.food:active:before {
+    background-color: #fe5f1e;
+}
+
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));

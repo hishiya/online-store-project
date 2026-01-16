@@ -8,7 +8,7 @@ export const fetchProducts = createAsyncThunk(
             const data = await fetchProductsRequest();
             return data;
         } catch (error) {
-            return rejesctWithValue(error.response?.data?.message || 'Не вдалося завантажити товари');
+            return rejectWithValue(error.response?.data?.message || 'Не вдалося завантажити товари');
     }
  });
 
