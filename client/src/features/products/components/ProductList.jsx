@@ -9,6 +9,7 @@ export const ProductList = () => {
     const { items, error, isLoading } = useSelector((state) => state.products);
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState(null);
+    const [sortOrder, setSortOrder] = useState('default'); 
 
     const displayedProducts = items.filter((product) => {
         const query = searchQuery.trim().toLowerCase();
@@ -20,6 +21,16 @@ export const ProductList = () => {
         const matchesCategory = !selectedCategory || product.category === selectedCategory;
 
         return matchesQuery && matchesCategory;
+    });
+
+    const sortedProducts = [...displayedProducts].sort((a, b) => {
+        if (sortOrder === 'asc') {
+            return a.price - b.price;
+        } else if (sortOrder === 'desc') {
+            return b.price - a.price;
+        } else {
+            return items.indexOf(a) - items.indexOf(b); 
+        }
     });
 
 
@@ -50,6 +61,7 @@ export const ProductList = () => {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                     />
+
                     <ul className={styles.list}>
                         <li onClick={() => setSelectedCategory(null)} className={styles.food + ' ' + (selectedCategory === null ? styles.active : '')}>Усі</li>
                         <li onClick={() => setSelectedCategory('Мангал')} className={styles.food + ' ' + (selectedCategory === 'Мангал' ? styles.active : '')}>Мангал</li>
@@ -57,14 +69,24 @@ export const ProductList = () => {
                         <li onClick={() => setSelectedCategory('Напої')} className={styles.food + ' ' + (selectedCategory === 'Напої' ? styles.active : '')}>Напої</li>
                         <li onClick={() => setSelectedCategory('Супи')} className={styles.food + ' ' + (selectedCategory === 'Супи' ? styles.active : '')}>Супи</li>
                     </ul>
+
+                    <select
+                        className={styles.sortSelect}
+                        value={sortOrder}
+                        onChange={(e) => setSortOrder(e.target.value)}
+                    >
+                        <option value="default">За замовчуванням</option>
+                        <option value="asc">Від дешевих до дорогих</option>
+                        <option value="desc">Від дорогих до дешевих</option>
+                    </select>
                 </div>
             </div>
 
             <div className={styles.grid}>
                 {!items.length ? (
                     <div className={styles.empty}>Товарів поки що немає</div>
-                ) : displayedProducts.length > 0 ? (
-                    displayedProducts.map((product) => (
+                ) : sortedProducts.length > 0 ? (
+                    sortedProducts.map((product) => (
                         <ProductCard key={product._id} product={product} />
                     ))
                 ) : (

@@ -64,3 +64,140 @@ a:hover {
     font-size: 0.85rem;
     color: #999;
 }
+
+@media (max-width: 1400px) {
+    .footer {
+        padding: 50px 15px 15px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0px;
+    }
+
+    .section p {
+        font-size: 0.9rem;
+    }
+
+    a {
+        font-size: 15px;
+    }
+
+    .section ul li {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+
+    .bottom {
+        font-size: 0.8rem;
+    }
+
+    .section {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        padding: 40px 10px 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section h3 {
+        font-size: 1rem;
+    }
+
+    .section p {
+        font-size: 0.85rem;
+    }
+
+    a {
+        font-size: 14px;
+    }
+
+    .section ul li {
+        font-size: 0.85rem;
+    }
+
+    .bottom {
+        font-size: 0.75rem;
+        padding-top: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 8px 8px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section h3 {
+        font-size: 0.9rem;
+    }
+
+    .section p {
+        font-size: 0.8rem;
+    }
+
+    a {
+        font-size: 13px;
+    }
+
+    .section ul li {
+        font-size: 0.8rem;
+    }
+
+    .bottom {
+        font-size: 0.7rem;
+        padding-top: 0px;
+    }
+}
+
+@media (max-width: 460px) {
+    .footer {
+        padding: 20px 5px 5px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section h3 {
+        font-size: 0.8rem;
+    }
+
+    .section p {
+        font-size: 0.75rem;
+    }
+
+    a {
+        font-size: 12px;
+    }
+
+    .section ul li {
+        font-size: 0.75rem;
+    }
+
+    .bottom {
+        font-size: 0.65rem;
+        padding-top: 0px;
+    }
+}

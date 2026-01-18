@@ -28,6 +28,7 @@ export const Header = () => {
         <header className={styles.header}>
             <nav className={styles.nav}>
                 <Link to="/" className={styles.link}>Головна</Link>
+                <Link to="/menu" className={styles.link}>Меню</Link>
                 <Link to="/about" className={styles.link}>Про нас</Link>
                 <Link to="/promotions" className={styles.link}>Акції</Link>
                 <Link to="/contacts" className={styles.link}>Контакти</Link>

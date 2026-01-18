@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
+import HeroSection from '../components/HeroSection';
 import { ProductList } from '../features/products/components/ProductList';
 import { About } from '../pages/About';
 import { Promotions } from '../pages/Promotions';
@@ -13,7 +14,8 @@ import { AdminAddProduct } from '../pages/AdminAddProduct';
 export const AppRouter = () => {
     return (
         <Routes>
-            <Route path="/" element={<ProductList />} />
+            <Route path="/" element={<HeroSection />} />
+            <Route path="/menu" element={<ProductList />} />
             <Route path="/about" element={<About />} />
             <Route path="/promotions" element={<Promotions />} />
             <Route path="/contacts" element={<Contacts />} />
