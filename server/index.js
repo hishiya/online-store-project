@@ -8,6 +8,7 @@ const OrderController = require('./controllers/orderController');
 const ProductController = require('./controllers/productController');
 const checkAuth = require('./utils/checkAuth');
 const UserController = require('./controllers/userController');
+const VacancyController = require('./controllers/vacancyController');
 const { register, login, getMe, updateCart } = require('./controllers/userController')
 const checkAdmin = require('./utils/checkAdmin');
 
@@ -40,6 +41,12 @@ app.post('/upload', checkAuth, upload.single('image'), (req, res) => {
 app.post('/auth/register', UserController.register);
 app.post('/auth/login', UserController.login);
 app.get('/auth/me', checkAuth, UserController.getMe);
+
+app.post('/vacancies', VacancyController.create);
+app.get('/vacancies', checkAuth, checkAdmin, VacancyController.getAll);
+app.get('/vacancies/:id', checkAuth, checkAdmin, VacancyController.getOne);
+app.patch('/vacancies/:id', checkAuth, checkAdmin, VacancyController.updateStatus);
+app.delete('/vacancies/:id', checkAuth, checkAdmin, VacancyController.remove);  
 
 app.get('/products', ProductController.getAll);
 app.get('/products/:id', ProductController.getOne);

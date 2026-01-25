@@ -70,7 +70,7 @@ export const AdminAddProduct = () => {
 
       <div className={styles.formGroup}>
         <button onClick={() => inputFileRef.current.click()} className={styles.uploadBtn}>
-           📸 Завантажити фото
+           Завантажити фото
         </button>
         <input ref={inputFileRef} type="file" onChange={handleChangeFile} hidden />
         
@@ -118,7 +118,7 @@ export const AdminAddProduct = () => {
       </div>
 
       <button onClick={onSubmit} className={styles.submitBtn}>
-        Опублікувати товар ✅
+        Опублікувати товар
       </button>
     </div>
     )

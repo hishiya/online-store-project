@@ -1,72 +1,303 @@
+/* Admin Orders page styles */
+
 .root {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-family: 'Inter', sans-serif;
-  
-    h1 {
-      margin-bottom: 30px;
-      color: #333;
-    }
+  width: min(1600px, 92%);
+  margin: 0 auto;
+  padding: 30px 0 60px;
+  color: #2c2c2c;
+}
+
+.root h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.tableWrapper {
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.table th {
+  background: #fff8f0;
+  color: #333;
+  font-weight: 600;
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0e3d8;
+  white-space: nowrap;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f2f2f2;
+  vertical-align: top;
+}
+
+.table tr:hover {
+  background: #fffaf6;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.statusSelect {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  background: #fafafa;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.statusSelect:focus {
+  border-color: #fe5f1e;
+  box-shadow: 0 0 0 3px rgba(254, 95, 30, 0.15);
+}
+
+.statusSelect option {
+  font-weight: normal;
+}
+
+.price {
+  font-weight: 700;
+  color: #fe5f1e;
+  font-size: 16px;
+}
+
+.itemsList {
+  font-size: 13px;
+  color: #555;
+  max-width: 300px;
+  line-height: 1.5;
+}
+
+.itemsList div {
+  margin-bottom: 4px;
+}
+
+/* Mobile Cards - hidden by default */
+.cardsWrapper {
+  display: none;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.cardNumber {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fe5f1e;
+  background: #fff3e7;
+  padding: 5px 12px;
+  border-radius: 8px;
+}
+
+.cardDate {
+  font-size: 13px;
+  color: #888;
+}
+
+.cardClient {
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.cardName {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin-bottom: 4px;
+}
+
+.cardPhone {
+  font-size: 14px;
+  color: #555;
+}
+
+.cardAddress {
+  font-size: 13px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.cardItems {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+.cardItem {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+.cardComment {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #d35400;
+  font-style: italic;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.cardPrice {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fe5f1e;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1600px) {
+  .root {
+    width: min(1400px, 92%);
   }
-  
-  .tableWrapper {
-    overflow-x: auto;           
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    border: 1px solid #eee;
-  }
-  
+
   .table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 800px; 
-  
-    th, td {
-      padding: 15px;
-      text-align: left;
-      border-bottom: 1px solid #eee;
-    }
-  
-    th {
-      background: #f9f9f9;
-      font-weight: 600;
-      color: #555;
-      font-size: 14px;
-      text-transform: uppercase;
-    }
-  
-    tr:last-child td {
-      border-bottom: none;
-    }
+    font-size: 14.5px;
   }
-  
-  .statusSelect {
-    padding: 8px 12px;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    background: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-  
-    option {
-      font-weight: normal;
-    }
+}
+
+@media (max-width: 1400px) {
+  .root {
+    width: 94%;
   }
-  
-  .price {
-    font-weight: bold;
-    color: #2c3e50;
+
+  .table th,
+  .table td {
+    padding: 12px 14px;
   }
 
   .itemsList {
-    font-size: 13px;
-    color: #666;
-    max-width: 300px;
-    
-    div {
-      margin-bottom: 4px;
-    }
+    max-width: 260px;
   }
+}
+
+@media (max-width: 1024px) {
+  .root {
+    width: 95%;
+    padding: 24px 0 50px;
+  }
+
+  .tableWrapper {
+    overflow-x: auto;
+  }
+
+  .table {
+    min-width: 800px;
+    font-size: 14px;
+  }
+
+  .itemsList {
+    max-width: 220px;
+  }
+
+  .statusSelect {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .root {
+    width: 96%;
+    padding: 20px 0 40px;
+  }
+
+  .root h1 {
+    font-size: 24px;
+  }
+
+  /* Hide table, show cards */
+  .tableWrapper {
+    display: none;
+  }
+
+  .cardsWrapper {
+    display: block;
+  }
+}
+
+@media (max-width: 460px) {
+  .root {
+    width: 100%;
+    padding: 16px 10px 32px;
+  }
+
+  .root h1 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .card {
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .cardName {
+    font-size: 16px;
+  }
+
+  .cardItems {
+    padding: 10px;
+  }
+
+  .cardItem {
+    font-size: 13px;
+  }
+
+  .cardFooter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cardPrice {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .statusSelect {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}

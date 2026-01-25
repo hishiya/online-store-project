@@ -291,7 +291,7 @@
 
     .dropdown {
         position: absolute;
-        top: 100%;
+        top: 20%;
         background: white;
         border-radius: 12px;
         min-width: 150px;
@@ -344,6 +344,10 @@
 
     .logo {
         font-size: 16px;
+    }
+
+    .dropdown {
+        top: 17%;
     }
 
     .nav {

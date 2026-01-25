@@ -22,6 +22,8 @@ export const Footer = () => {
                         <li><Link to="/about">Про нас</Link></li>
                         <li><Link to="/promotions">Акції</Link></li>
                         <li><Link to="/contacts">Контакти</Link></li>
+                        <li><Link to="/vacancies">Робота у нас</Link></li>
+
                     </ul>
                 </div>
 

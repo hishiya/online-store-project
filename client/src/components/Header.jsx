@@ -72,10 +72,13 @@ export const Header = () => {
                                 {user?.role === 'admin' && (
                                     <>
                                         <Link to="/admin/add-product" onClick={() => setIsOpen(false)}>
-                                            ➕ Додати товар
+                                            😋 Додати товар
                                         </Link>
                                         <Link to="/admin/orders" onClick={() => setIsOpen(false)}>
                                             📋 Керування замовленнями
+                                        </Link>
+                                        <Link to="/admin/vacancies" onClick={() => setIsOpen(false)}>
+                                            🙂 Перегляд заявок на роботу
                                         </Link>
                                     </>
                                 )}

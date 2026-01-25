@@ -55,7 +55,6 @@ export const AdminOrders = () => {
     return (
         <div className={styles.root}>
             <h1>Панель керування замовленнями 🛠️</h1>
-
             <div className={styles.tableWrapper}>
                 <table className={styles.table}>
                     <thead>
@@ -114,6 +113,54 @@ export const AdminOrders = () => {
                         ))}
                     </tbody>
                 </table>
+            </div>
+
+            <div className={styles.cardsWrapper}>
+                {orders.map((order) => (
+                    <div key={order._id} className={styles.card}>
+                        <div className={styles.cardHeader}>
+                            <span className={styles.cardNumber}>#{order._id.slice(-6).toUpperCase()}</span>
+                            <span className={styles.cardDate}>
+                                {new Date(order.createdAt).toLocaleDateString()}
+                            </span>
+                        </div>
+                        <div className={styles.cardClient}>
+                            <div className={styles.cardName}>{order.fullName}</div>
+                            <div className={styles.cardPhone}>{order.phone}</div>
+                            <div className={styles.cardAddress}>{order.address}</div>
+                        </div>
+                        <div className={styles.cardItems}>
+                            {order.items.map((item, idx) => (
+                                <div key={idx} className={styles.cardItem}>
+                                    • {item.product ? item.product.title : 'Товар видалено'} (x{item.count})
+                                </div>
+                            ))}
+                            {order.comment && (
+                                <div className={styles.cardComment}>
+                                    💬 "{order.comment}"
+                                </div>
+                            )}
+                        </div>
+                        <div className={styles.cardFooter}>
+                            <span className={styles.cardPrice}>{order.totalPrice} ₴</span>
+                            <select
+                                className={styles.statusSelect}
+                                value={order.status}
+                                onChange={(e) => handleChangeStatus(order._id, e.target.value)}
+                                style={{
+                                    borderColor: order.status === 'Виконано' ? 'green' : '#ddd',
+                                    color: order.status === 'Виконано' ? 'green' : 'black'
+                                }}
+                            >
+                                <option value="В обробці">⏳ В обробці</option>
+                                <option value="Готується">👨‍🍳 Готується</option>
+                                <option value="Відправлено">🚀 Відправлено</option>
+                                <option value="Виконано">✅ Виконано</option>
+                                <option value="Скасовано">❌ Скасовано</option>
+                            </select>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );

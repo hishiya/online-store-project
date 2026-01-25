@@ -1,0 +1,350 @@
+.root {
+	width: min(1600px, 92%);
+	margin: 0 auto;
+	padding: 30px 0 60px;
+	color: #2c2c2c;
+}
+
+.root h1 {
+	font-size: 28px;
+	font-weight: 700;
+	color: #1f1f1f;
+	margin-bottom: 24px;
+	text-align: center;
+}
+
+.empty {
+	background: #ffffff;
+	border: 1px solid #eee;
+	border-radius: 16px;
+	padding: 40px 20px;
+	text-align: center;
+	color: #777;
+	font-size: 16px;
+}
+
+.tableWrapper {
+	background: #ffffff;
+	border: 1px solid #eee;
+	border-radius: 18px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+	overflow: hidden;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 15px;
+}
+
+.table thead th {
+	background: #fff8f0;
+	color: #333;
+	font-weight: 600;
+	text-align: left;
+	padding: 14px 16px;
+	border-bottom: 1px solid #f0e3d8;
+	white-space: nowrap;
+}
+
+.table tbody td {
+	padding: 14px 16px;
+	border-bottom: 1px solid #f2f2f2;
+	vertical-align: top;
+}
+
+.link {
+	color: #fe5f1e;
+	font-weight: 500;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.link:hover {
+	color: #e85215;
+}
+
+.message {
+	max-width: 380px;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	color: #555;
+	line-height: 1.4;
+}
+
+.fileLink {
+	color: #fe5f1e;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.fileLink:hover {
+	text-decoration: underline;
+}
+
+.noFile {
+	color: #999;
+}
+
+.statusSelect {
+	padding: 8px 10px;
+	border-radius: 10px;
+	border: 0px solid #eee;;
+	font-size: 14px;
+	color: #333;
+	outline: none;
+	transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reviewed {
+	background: #f3f6ff;
+	color: #2f4aa1;
+	border-color: #d9e2ff;
+}
+
+.accepted {
+	background: #e9f8f0;
+	color: #1f7a45;
+	border-color: #c7eed8;
+}
+
+.rejected {
+	background: #fff1f1;
+	color: #b12d2d;
+	border-color: #ffd0d0;
+}
+
+.deleteBtn {
+	background: #ff4d4f;
+	color: #fff;
+	border: none;
+	padding: 8px 14px;
+	border-radius: 12px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+
+.deleteBtn:hover {
+	background: #ff3b3d;
+	transform: translateY(-1px);
+	box-shadow: 0 6px 16px rgba(255, 77, 79, 0.25);
+}
+
+.cardsWrapper {
+	display: none;
+}
+
+.card {
+	background: #ffffff;
+	border: 1px solid #eee;
+	border-radius: 16px;
+	padding: 18px;
+	margin-bottom: 16px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cardHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+.cardNumber {
+	font-size: 13px;
+	font-weight: 600;
+	color: #fe5f1e;
+	background: #fff3e7;
+	padding: 4px 10px;
+	border-radius: 8px;
+}
+
+.cardDate {
+	font-size: 13px;
+	color: #888;
+}
+
+.cardName {
+	font-size: 18px;
+	font-weight: 700;
+	color: #1f1f1f;
+	margin-bottom: 10px;
+}
+
+.cardContacts {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin-bottom: 12px;
+}
+
+.cardContacts a {
+	font-size: 14px;
+}
+
+.cardMessage {
+	background: #f9f9f9;
+	padding: 12px;
+	border-radius: 10px;
+	font-size: 14px;
+	color: #555;
+	line-height: 1.5;
+	margin-bottom: 12px;
+}
+
+.cardActions {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.cardActions .statusSelect {
+	flex: 1;
+	min-width: 140px;
+}
+
+.cardActions .deleteBtn {
+	flex-shrink: 0;
+}
+
+@media (max-width: 1600px) {
+	.root {
+		width: min(1400px, 92%);
+	}
+
+	.table {
+		font-size: 14.5px;
+	}
+}
+
+@media (max-width: 1400px) {
+	.root {
+		width: 94%;
+	}
+
+	.message {
+		max-width: 300px;
+	}
+
+	.table thead th,
+	.table tbody td {
+		padding: 12px 14px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.root {
+		width: 95%;
+		padding: 24px 0 50px;
+	}
+
+	.tableWrapper {
+		overflow-x: auto;
+	}
+
+	.table {
+		min-width: 860px;
+		font-size: 14px;
+	}
+
+	.message {
+		max-width: 260px;
+	}
+
+	.statusSelect {
+		padding: 7px 8px;
+		border-radius: 9px;
+		font-size: 13px;
+	}
+
+	.deleteBtn {
+		padding: 7px 12px;
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 768px) {
+	.root {
+		width: 96%;
+		padding: 20px 0 40px;
+	}
+
+	.root h1 {
+		font-size: 24px;
+	}
+
+	.tableWrapper {
+		display: none;
+	}
+
+	.cardsWrapper {
+		display: block;
+	}
+
+	.empty {
+		padding: 30px 16px;
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 460px) {
+	.root {
+		width: 100%;
+		padding: 16px 10px 32px;
+	}
+
+	.root h1 {
+		font-size: 20px;
+		margin-bottom: 18px;
+	}
+
+	.card {
+		padding: 14px;
+		border-radius: 14px;
+	}
+
+	.cardName {
+		font-size: 16px;
+	}
+
+	.cardContacts a {
+		font-size: 13px;
+	}
+
+	.cardMessage {
+		padding: 10px;
+		font-size: 13px;
+	}
+
+	.cardActions {
+		flex-direction: column;
+	}
+
+	.cardActions .statusSelect {
+		width: 100%;
+	}
+
+	.cardActions .deleteBtn {
+		width: 100%;
+	}
+
+	.statusSelect {
+		padding: 10px 12px;
+		font-size: 14px;
+	}
+
+	.deleteBtn {
+		padding: 10px 12px;
+		font-size: 14px;
+	}
+
+	.empty {
+		padding: 24px 12px;
+		font-size: 14px;
+	}
+}

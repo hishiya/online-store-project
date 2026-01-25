@@ -23,7 +23,7 @@ export const Checkout = () => {
 
     const [isLoading, setIsLoading] = useState(false);
 
-    if (!items.length) return <Navigate to="/" />;
+    if (!items.length) return <Navigate to="/menu" />;
     if (!isAuth) return <Navigate to="/login" />;
 
     const handleChange = (e) => {
@@ -52,7 +52,6 @@ export const Checkout = () => {
       
       <div className={styles.grid}>
         
-        {/* ЛІВА КОЛОНКА: ФОРМА */}
         <form onSubmit={onSubmit} className={styles.form}>
           <div className={styles.formGroup}>
             <label>ПІБ</label>
@@ -106,7 +105,6 @@ export const Checkout = () => {
           </button>
         </form>
 
-        {/* ПРАВА КОЛОНКА: ВАШЕ ЗАМОВЛЕННЯ */}
         <div className={styles.summary}>
           <h3>Ваше замовлення:</h3>
           <ul className={styles.itemList}>
