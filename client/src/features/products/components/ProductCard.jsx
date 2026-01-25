@@ -23,9 +23,13 @@ export const ProductCard = ({ product }) => {
         maximumFractionDigits: 0,
     }).format(product.price);
 
-    const imageUrl = product.imageUrl 
-        ? `http://localhost:5000${product.imageUrl}`
-        : 'https://via.placeholder.com/200?text=No+Image';
+    const getImageUrl = (url) => {
+        if (!url) return 'https://via.placeholder.com/200?text=No+Image';
+        if (url.startsWith('http')) return url;
+        return `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${url}`;
+    };
+
+    const imageUrl = getImageUrl(product.imageUrl);
 
     const onClickAdd = () => {
         const item = {

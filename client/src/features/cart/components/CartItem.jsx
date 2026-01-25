@@ -19,9 +19,13 @@ export const CartItem = ({ _id, title, price, imageUrl, count }) => {
         }
     }
 
-    const imageSrc = imageUrl 
-    ? `http://localhost:5000${imageUrl}` 
-    : 'https://via.placeholder.com/100';
+    const getImageUrl = (url) => {
+        if (!url) return 'https://via.placeholder.com/100';
+        if (url.startsWith('http')) return url;
+        return `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${url}`;
+    };
+
+    const imageSrc = getImageUrl(imageUrl);
 
     return (
         <div className={styles.item}>
